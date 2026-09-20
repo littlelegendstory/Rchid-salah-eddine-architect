@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0d0d0d">
+  <title>RCHID SALAH EDDINE — Architecte</title>
+  <meta name="description" content="RCHID SALAH EDDINE — Architecte. Architecture, urbanisme, villas, hôtels, commerces, industrie et aménagement.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home">
+    <span class="brand-mark">RS</span>
+    <span><strong>RCHID SALAH EDDINE</strong><small>ARCHITECTE</small></span>
+  </a>
+  <button class="menuBtn" onclick="document.body.classList.toggle('menuOpen')">☰</button>
+  <nav>
+    <a href="#home">Accueil</a>
+    <a href="#about">Agence</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="heroOverlay"></div>
+  <div class="heroContent">
+    <div class="eyebrow">ARCHITECTURE • URBANISME • DESIGN</div>
+    <h1>Concevoir des espaces<br><em>qui traversent le temps.</em></h1>
+    <p>Architecture contemporaine, projets résidentiels, hôteliers, commerciaux et urbains au Maroc.</p>
+    <div class="heroActions">
+      <a class="btn primary" href="#portfolio">Voir les projets</a>
+      <a class="btn ghost" href="#contact">Parler d’un projet</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <div class="sectionLabel">01 — AGENCE</div>
+  <div class="twoCols">
+    <div>
+      <h2>Architecture précise.<br>Identité forte.</h2>
+    </div>
+    <div>
+      <p>RCHID SALAH EDDINE ARCHITECTE développe des projets qui associent fonctionnalité, élégance, lumière naturelle et qualité d’usage.</p>
+      <p>De la conception à l’autorisation et au suivi, chaque projet est pensé comme une réponse unique à son contexte, son programme et son ambition.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section dark">
+  <div class="sectionLabel">02 — SERVICES</div>
+  <h2>Une approche complète du projet</h2>
+  <div class="serviceGrid">
+    <article><span>01</span><h3>Architecture</h3><p>Villas, immeubles, hôtels, équipements et bâtiments professionnels.</p></article>
+    <article><span>02</span><h3>Urbanisme</h3><p>Lotissements, aménagements, études de faisabilité et intégration urbaine.</p></article>
+    <article><span>03</span><h3>Design intérieur</h3><p>Espaces résidentiels, commerciaux et hôteliers à identité contemporaine.</p></article>
+    <article><span>04</span><h3>Suivi & coordination</h3><p>Accompagnement administratif, technique et suivi architectural du chantier.</p></article>
+  </div>
+</section>
+
+<section id="portfolio" class="section portfolioSection">
+  <div class="sectionLabel">03 — PROJETS SÉLECTIONNÉS</div>
+  <div class="portfolioHead">
+    <h2>Portfolio</h2>
+    <div id="filters" class="filters">
+      <button class="active" data-filter="Tous">Tous</button>
+    </div>
+  </div>
+
+  <div id="loading" class="loading">Chargement des projets...</div>
+  <div id="portfolioGrid" class="portfolioGrid"></div>
+  <div id="portfolioEmpty" class="empty hidden">Aucun projet publié pour le moment.</div>
+</section>
+
+<section class="quoteBand">
+  <blockquote>« Une architecture réussie ne se contente pas d’être vue. Elle organise la vie. »</blockquote>
+</section>
+
+<section id="contact" class="section contact">
+  <div class="sectionLabel">04 — CONTACT</div>
+  <div class="twoCols">
+    <div>
+      <h2>Vous avez un projet ?</h2>
+      <p>Parlons de votre terrain, de votre programme et de vos objectifs.</p>
+    </div>
+    <div class="contactCard">
+      <div><span>Email</span><strong>À configurer</strong></div>
+      <div><span>Téléphone / WhatsApp</span><strong>À configurer</strong></div>
+      <div><span>Zone d’intervention</span><strong>Maroc</strong></div>
+      <a class="btn primary wide" href="#portfolio">Découvrir le portfolio</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div>© <span id="year"></span> RCHID SALAH EDDINE • ARCHITECTE</div>
+  <div>Architecture • Urbanisme • Design</div>
+</footer>
+
+<div id="projectModal" class="modal hidden" onclick="if(event.target===this)closeProject()">
+  <div class="modalCard">
+    <button class="closeBtn" onclick="closeProject()">×</button>
+    <img id="modalImage" alt="">
+    <div class="modalContent">
+      <div id="modalType" class="eyebrow darkText"></div>
+      <h3 id="modalTitle"></h3>
+      <p id="modalLocation"></p>
+      <p id="modalDescription"></p>
+      <div id="modalProgrammeWrap" class="modalProgramme hidden"><span>Programme</span><p id="modalProgramme"></p></div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
