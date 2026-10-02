@@ -20,3 +20,50 @@ footer{padding:24px 7vw;background:#0a0a0a;color:#888;display:flex;justify-conte
 .modal{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.78);display:grid;place-items:center;padding:20px}.modalCard{max-width:960px;width:100%;max-height:92vh;overflow:auto;background:#fff;position:relative}.modalCard img{width:100%;max-height:60vh;object-fit:cover;background:#ddd}.modalContent{padding:28px}.modalContent h3{font-size:34px;margin:8px 0;font-weight:400}.modalContent p{color:#555;line-height:1.7}.darkText{color:#8b7b62}.closeBtn{position:absolute;right:12px;top:12px;width:42px;height:42px;border:0;background:#fff;font-size:26px;z-index:2}
 @media(max-width:800px){.topbar{padding:14px 18px}.menuBtn{display:block}nav{display:none;position:absolute;top:68px;left:12px;right:12px;background:#111;padding:18px;flex-direction:column}.menuOpen nav{display:flex}.hero{padding:0 20px 8vh}.hero h1{letter-spacing:-2px}.section{padding:70px 20px}.twoCols{grid-template-columns:1fr;gap:28px}.serviceGrid{grid-template-columns:1fr 1fr}.portfolioHead{display:block}.filters{margin-top:20px}.portfolioGrid{grid-template-columns:1fr}.quoteBand blockquote{font-size:27px}footer{display:block;line-height:1.8}.contactCard>div{display:block}.contactCard a,.contactCard strong{display:block;text-align:left;margin-top:6px}}
 .projectPlaceholder{width:100%;height:100%;display:grid;place-items:center;background:linear-gradient(135deg,#171717,#4c463d);color:#d9c39e;font:500 28px/1 Georgia,serif;letter-spacing:8px}.modalProgramme{margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}.modalProgramme span{display:block;font-size:10px;letter-spacing:2px;color:#8b7b62;text-transform:uppercase;margin-bottom:7px}.modalProgramme p{margin:0}.project:focus-visible{outline:2px solid #b69a6a;outline-offset:3px}
+
+/* Professional responsive refinements */
+body{overflow-x:hidden}
+img{max-width:100%;display:block}
+.topbar{backdrop-filter:saturate(120%) blur(8px);-webkit-backdrop-filter:saturate(120%) blur(8px)}
+.heroContent{width:min(100%,980px)}
+.contactCard strong{overflow-wrap:anywhere}
+.qrBlock{margin-top:24px;padding:20px;background:#f6f3ee;border:1px solid var(--line);display:flex;align-items:center;gap:20px}
+.qrBlock img{width:132px;height:132px;object-fit:contain;background:#fff;padding:8px;border:1px solid var(--line)}
+.qrBlock p{margin:0;color:#555;font-size:13px;line-height:1.5}
+@media (min-width:1200px){
+  .section{padding-left:8vw;padding-right:8vw}
+  .hero{padding-left:8vw;padding-right:8vw}
+  .portfolioGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:801px) and (max-width:1199px){
+  .topbar{padding:16px 28px}
+  nav{gap:16px}
+  .hero{padding:0 5vw 8vh}
+  .section{padding:84px 5vw}
+  .serviceGrid{grid-template-columns:repeat(2,1fr)}
+  .twoCols{gap:5vw}
+}
+@media(max-width:800px){
+  .brand strong{font-size:11px}.brand small{font-size:8px;letter-spacing:3px}
+  .hero{min-height:88svh}
+  .heroContent{padding-right:4px}
+  .hero h1{font-size:clamp(42px,15vw,68px);line-height:1}
+  .hero p{font-size:15px}
+  .heroActions .btn{width:100%;text-align:center}
+  .section h2{font-size:clamp(32px,11vw,50px)}
+  .serviceGrid{grid-template-columns:1fr}
+  .portfolioGrid{gap:14px}
+  .project{aspect-ratio:5/4}
+  .quoteBand{padding:56px 20px}
+  .quoteBand blockquote{font-size:24px}
+  .qrBlock{align-items:flex-start;flex-direction:column}
+  .qrBlock img{width:148px;height:148px}
+  .modal{padding:10px}.modalContent{padding:20px}.modalContent h3{font-size:28px}
+}
+@media(max-width:430px){
+  .topbar{padding:12px 14px}
+  .brand-mark{width:38px;height:38px}
+  .section{padding:58px 16px}
+  .hero{padding-left:16px;padding-right:16px}
+  .filters{gap:6px}.filters button{padding:7px 10px}
+}
