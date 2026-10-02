@@ -71,3 +71,29 @@ img{max-width:100%;display:block}
 .floatingWhatsApp{position:fixed;right:22px;bottom:22px;z-index:80;background:#111;color:#fff;border:1px solid rgba(255,255,255,.16);padding:13px 18px;border-radius:999px;font-size:12px;letter-spacing:.6px;box-shadow:0 12px 30px rgba(0,0,0,.22)}
 .floatingWhatsApp:hover{transform:translateY(-1px)}
 @media(max-width:800px){.floatingWhatsApp{right:14px;bottom:14px;padding:12px 15px}}
+
+.agencyValues,.processGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:55px}
+.agencyValues article,.processGrid article{background:var(--bg);padding:28px}
+.agencyValues span,.processGrid span{font-size:10px;letter-spacing:2px;color:#8b7b62}
+.agencyValues h3,.processGrid h3{font-size:20px;font-weight:400;margin:12px 0 8px}
+.agencyValues p,.processGrid p{font-size:14px;line-height:1.65;color:#666;margin:0}
+.architectSection{background:#ede8df}
+.architectGrid{display:grid;grid-template-columns:minmax(240px,.7fr) 1.3fr;gap:8vw;align-items:center}
+.architectMonogram{aspect-ratio:1;display:grid;place-items:center;background:#111;color:#d6c4a6;font:300 clamp(70px,12vw,150px)/1 Georgia,serif;letter-spacing:-5px}
+.architectSection p,.portfolioIntro p{font-size:17px;line-height:1.8;color:#555}
+.portfolioIntro{display:grid;grid-template-columns:1fr 1fr;gap:8vw;margin-bottom:55px}
+.portfolioFilterHead{border-top:1px solid var(--line);padding-top:22px}
+.portfolioFilterHead h3{font-size:18px;font-weight:400;margin:0}
+.processGrid{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){
+  .architectGrid,.portfolioIntro{grid-template-columns:1fr}
+  .architectGrid{gap:38px}
+  .architectMonogram{max-width:340px}
+  .agencyValues{grid-template-columns:1fr}
+  .processGrid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .processGrid{grid-template-columns:1fr}
+  .agencyValues,.processGrid{margin-top:36px}
+  .portfolioIntro{gap:20px;margin-bottom:38px}
+}
