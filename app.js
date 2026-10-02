@@ -21,6 +21,7 @@ async function loadProjects() {
     $('loading').classList.add('hidden');
     buildFilters();
     renderProjects();
+    enhanceHero();
   } catch (error) {
     $('loading').textContent = 'Portfolio momentanément indisponible.';
   }
@@ -122,3 +123,17 @@ document.querySelectorAll('nav a').forEach(a => a.addEventListener('click', () =
 
 $('year').textContent = new Date().getFullYear();
 loadProjects();
+
+
+function enhanceHero() {
+  const firstWithImage = projects.find(p => bestImage(p));
+  if (!firstWithImage) return;
+  const image = bestImage(firstWithImage);
+  const hero = document.querySelector('.hero');
+  if (hero && image) {
+    hero.style.backgroundImage =
+      `linear-gradient(120deg,rgba(10,10,10,.72),rgba(10,10,10,.24)),url("${image}")`;
+    hero.style.backgroundSize = 'cover';
+    hero.style.backgroundPosition = 'center';
+  }
+}
