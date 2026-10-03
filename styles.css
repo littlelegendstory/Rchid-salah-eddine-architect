@@ -137,3 +137,18 @@ img{max-width:100%;display:block}
 /* Strict official portfolio ordering + visual integrity */
 .portfolioGrid .project{aspect-ratio:1.413/1}
 .projectSprite{background-size:300% 700%;background-position:var(--sprite-x,0%) var(--sprite-y,0%);background-repeat:no-repeat}
+
+/* Official RCHID SALAH EDDINE PNG logo */
+.brand{display:flex;align-items:center;gap:12px}
+.brandLogo{width:56px;height:56px;object-fit:contain;display:block}
+.brandText{display:flex;flex-direction:column;line-height:1.05}
+.brandText small{margin-top:4px}
+.footerBrand{display:flex;align-items:center;gap:14px}
+.footerBrand img{width:64px;height:64px;object-fit:contain;background:#fff;border-radius:4px}
+@media(max-width:800px){
+  .brandLogo{width:46px;height:46px}
+  .brandText strong{font-size:12px}
+  .brandText small{font-size:9px}
+  .footerBrand{align-items:flex-start}
+  .footerBrand img{width:52px;height:52px}
+}
