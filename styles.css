@@ -552,3 +552,24 @@ img{max-width:100%;display:block}
     width:88%;
   }
 }
+
+/* === HEADER LOGO HIGH-CONTRAST WHITE/GREY === */
+.topbar{
+  background:rgba(8,8,8,.96)!important;
+}
+.brandLogoWide{
+  filter:grayscale(1) brightness(2.7) contrast(.85)!important;
+  opacity:1!important;
+  visibility:visible!important;
+}
+.heroBrandLockupFinal img,
+.architectLogoPanel img{
+  filter:grayscale(1) brightness(2.35) contrast(.9)!important;
+  opacity:1!important;
+}
+@media(max-width:800px){
+  .brandLogoWide{
+    width:235px!important;
+    max-width:64vw!important;
+  }
+}
