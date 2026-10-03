@@ -657,3 +657,33 @@ img{max-width:100%;display:block}
   .headerBrandText strong{font-size:10px!important;letter-spacing:1.2px!important}
   .headerBrandText small{font-size:6.5px!important;letter-spacing:3px!important}
 }
+
+/* === CLIENT FINAL HEADER === */
+.headerLogoMark{
+  width:62px!important;
+  height:46px!important;
+  max-width:none!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:transparent!important;
+  padding:0!important;
+  margin:0!important;
+  border:0!important;
+  box-shadow:none!important;
+  filter:none!important;
+  opacity:1!important;
+  visibility:visible!important;
+}
+.headerBrandText strong{
+  color:#fff!important;
+  text-transform:uppercase!important;
+}
+.headerBrandText small{
+  color:#b8b8b8!important;
+}
+@media(max-width:800px){
+  .headerLogoMark{width:54px!important;height:42px!important}
+}
+@media(max-width:430px){
+  .headerLogoMark{width:48px!important;height:38px!important}
+}
