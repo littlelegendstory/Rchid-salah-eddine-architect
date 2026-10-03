@@ -28,44 +28,44 @@
     </a>
   <button class="menuBtn" onclick="document.body.classList.toggle('menuOpen')">☰</button>
   <nav>
-    <a href="/#home">Accueil</a>
-    <a href="/#about">Agence</a>
-    <a href="/#architect">Architecte</a>
-    <a href="/#services">Services</a>
-    <a href="/portfolio.html">Portfolio</a>
-    <a href="/livre.html">Le livre</a>
-    <a href="/#contact">Contact</a>
+    <a href="/#home" data-i18n="navHome">Accueil</a>
+    <a href="/#about" data-i18n="navAgency">Agence</a>
+    <a href="/#architect" data-i18n="navArchitect">Architecte</a>
+    <a href="/#services" data-i18n="navServices">Services</a>
+    <a href="/portfolio.html" data-i18n="navPortfolio">Portfolio</a>
+    <a href="/livre.html" data-i18n="navBook">Le livre</a>
+    <a href="/#contact" data-i18n="navContact">Contact</a>
     <div class="langSwitch" aria-label="Langue"><button data-lang="fr" class="active">FR</button><button data-lang="ar">AR</button><button data-lang="en">EN</button></div>
   </nav>
 </header>
 <main class="portfolioPageMain">
 <section class="portfolioPageHero">
-  <div class="sectionLabel">RCHID SALAH EDDINE — ARCHITECTE</div>
-  <h1>Portfolio</h1>
-  <p>Découvrez l’ensemble des projets de l’agence, classés par typologie.</p>
-  <a class="portfolioBack" href="/">← Retour à l’accueil</a>
+  <div class="sectionLabel" data-i18n="portfolioHeroLabel">RCHID SALAH EDDINE — ARCHITECTE</div>
+  <h1 data-i18n="portfolioHeroTitle">Portfolio</h1>
+  <p data-i18n="portfolioHeroText">Découvrez l’ensemble des projets de l’agence, classés par typologie.</p>
+  <a class="portfolioBack" href="/" data-i18n="portfolioBack">← Retour à l’accueil</a>
 </section>
 <section id="portfolio" class="section portfolioSection">
-  <div class="sectionLabel">PORTFOLIO COMPLET</div>
+  <div class="sectionLabel" data-i18n="portfolioFullLabel">PORTFOLIO COMPLET</div>
   <div class="portfolioIntro">
     <div>
-      <h2>Nos projets</h2>
+      <h2 data-i18n="ourProjects">Nos projets</h2>
     </div>
     <div>
-      <p>Un portfolio transversal réunissant villas et logements, hôtels et complexes touristiques, commerces et showrooms, équipements, industrie, aménagement intérieur et projets urbains.</p>
-      <p>Chaque projet illustre une recherche différente autour du site, du programme, de la matière, de la lumière et de l’identité architecturale.</p>
+      <p data-i18n="portfolioPageP1">Un portfolio transversal réunissant villas et logements, hôtels et complexes touristiques, commerces et showrooms, équipements, industrie, aménagement intérieur et projets urbains.</p>
+      <p data-i18n="portfolioPageP2">Chaque projet illustre une recherche différente autour du site, du programme, de la matière, de la lumière et de l’identité architecturale.</p>
     </div>
   </div>
   <div class="portfolioHead portfolioFilterHead">
-    <h3>Explorer les projets</h3>
+    <h3 data-i18n="exploreProjects">Explorer les projets</h3>
     <div id="filters" class="filters">
       <button class="active" data-filter="Tous">Tous</button>
     </div>
   </div>
 
   <div class="staticPortfolioControls">
-  <button class="staticFilter active" data-cat="Tous">Tous</button>
-  <button class="staticFilter" data-cat="Villa">Villa</button><button class="staticFilter" data-cat="Immeuble">Immeuble</button><button class="staticFilter" data-cat="Commerce">Commerce</button><button class="staticFilter" data-cat="Hôtel">Hôtel</button><button class="staticFilter" data-cat="Complexe touristique">Complexe touristique</button><button class="staticFilter" data-cat="Équipement">Équipement</button><button class="staticFilter" data-cat="Station de services">Station de services</button><button class="staticFilter" data-cat="Industrie">Industrie</button><button class="staticFilter" data-cat="Urbanisme">Lotissements & Urbanisme</button>
+  <button class="staticFilter active" data-cat="Tous" data-cat-label="Tous">Tous</button>
+  <button class="staticFilter" data-cat="Villa" data-cat-label="Villa">Villa</button><button class="staticFilter" data-cat="Immeuble" data-cat-label="Immeuble">Immeuble</button><button class="staticFilter" data-cat="Commerce" data-cat-label="Commerce">Commerce</button><button class="staticFilter" data-cat="Hôtel" data-cat-label="Hôtel">Hôtel</button><button class="staticFilter" data-cat="Complexe touristique" data-cat-label="Complexe touristique">Complexe touristique</button><button class="staticFilter" data-cat="Équipement" data-cat-label="Équipement">Équipement</button><button class="staticFilter" data-cat="Station de services" data-cat-label="Station de services">Station de services</button><button class="staticFilter" data-cat="Industrie" data-cat-label="Industrie">Industrie</button><button class="staticFilter" data-cat="Urbanisme" data-cat-label="Urbanisme">Lotissements & Urbanisme</button>
 </div>
 <div id="staticPortfolioGrid" class="staticPortfolioGrid">
 
@@ -404,9 +404,9 @@
     <div class="modalContent">
       <div id="modalType" class="eyebrow darkText"></div>
       <h3 id="modalTitle"></h3>
-      <div class="projectMetaDetail"><span>Localisation / adresse</span><p id="modalLocation"></p></div>
+      <div class="projectMetaDetail"><span data-i18n="locationLabel">Localisation / adresse</span><p id="modalLocation"></p></div>
       <p id="modalDescription"></p>
-      <div id="modalProgrammeWrap" class="modalProgramme hidden"><span>Parti / vue architecturale</span><p id="modalProgramme"></p></div>
+      <div id="modalProgrammeWrap" class="modalProgramme hidden"><span data-i18n="designIntentLabel">Parti / vue architecturale</span><p id="modalProgramme"></p></div>
     </div>
   </div>
 </div>
