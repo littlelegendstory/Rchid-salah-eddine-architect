@@ -9,7 +9,33 @@ const esc = value => (value ?? '').toString().replace(/[&<>"']/g, m => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
 }[m]));
 
-const localProjectImages = {};
+const localProjectImages = {
+  'VILLA CONTEMPORAINE HALLALA': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/a06c871b-8811-49b4-bf8c-595a94d6354f.jpg'],
+  'VILLA HIKMA': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/a9c79c74-1a35-4db9-a78d-7aaf6c215efa.jpg'],
+  'VILLA RIAD ALMANZAH': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/2cc5ffa9-9776-4aba-925e-2ebbdb49cfb4.jpg'],
+  'VILLA ABRAJ': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/6389a9a8-9316-4f58-a0fd-2b5aa7298ba2.jpg'],
+  'VILLA CONTEMPORAINE': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/3cd558db-a13e-40b6-a99d-91674a53e80f.jpg'],
+  'IMMEUBLE RÉSIDENTIEL JNANE KAMILIA': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/79141e0c-f596-4108-98c1-c5570ac75d72.jpg'],
+  '220 LOGEMENTS': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/40b392b9-c305-4f47-bb3f-e98291a19380.jpg'],
+  'IMMEUBLE HAMRYA': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/dd07df8f-c150-4daa-92ba-7262e152d5b6.jpg'],
+  'PLATEAUX BUREAUX KÉNITRA': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/a9fcb287-9d28-48ce-8ff0-9fc7945b4e96.jpg'],
+  'CENTRE COMMERCIAL ATTAYSSIR': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/e903b6b8-fb01-4c5e-8df7-3a9a6aac61aa.jpg'],
+  'APART HÔTEL NADOR': [
+    'https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/a7288b90-0d7b-4695-b00d-5859ba1f1622.jpg',
+    'https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/a83143f3-ab45-4f19-bce0-b7d8c465cf0d.jpg',
+    'https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/25c41bd9-e316-4027-b7d4-aa6865b10a5f.jpg'
+  ],
+  'HÔTEL RELAXE TARFAYA': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/0c8a4eb0-c7e8-40d1-97f6-28d387c9561d.jpg'],
+  'COMPLEXE TOURISTIQUE AÏN TOTO': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/8140ca25-a8c9-4414-8c14-1f53be5ed80c.jpg'],
+  'CENTRE DE JOUR SOCIO-ÉDUCATIF': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/bcf6a9cd-79cd-4c4a-bbef-fc325f05b251.jpg'],
+  'SIÈGE DE SCOLARITÉ - FST MOHAMMEDIA': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/93ba8d07-a75b-4102-969c-9d1dbc3fa71c.jpg'],
+  'STATION DES SERVICES - AÏT MOUSSA OU ALI': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/96315a65-642a-4993-86f2-7496ed335dae.jpg'],
+  'STATION DE SERVICES & COMPLEXE DE LOISIRS': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/ed85fdf1-e62a-4343-9b81-af2a076a6b38.jpg'],
+  'UNITÉ DE STOCKAGE & FROID INDUSTRIEL': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/e8faf609-88fe-447f-96e0-24265354802c.jpg'],
+  'USINE DE SÉCHAGE DE FIENTE': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/6aec1465-64ac-4634-a5bf-546f8278609a.jpg'],
+  'POULAILLER DE POULES REPRODUCTRICES': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/b09e87a0-8478-4f63-a597-747bb9bab7d3.jpg'],
+  'USINE DE COUVOIR DE POULES': ['https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/46b33dd3-ecf7-4994-a645-87b8a45a6e1b.jpg']
+};
 
 const officialPortfolioOrder = [
   'VILLA CONTEMPORAINE HALLALA',
@@ -32,7 +58,9 @@ const officialPortfolioOrder = [
   'UNITÉ DE STOCKAGE & FROID INDUSTRIEL',
   'USINE DE SÉCHAGE DE FIENTE',
   'POULAILLER DE POULES REPRODUCTRICES',
-  'USINE DE COUVOIR DE POULES'
+  'USINE DE COUVOIR DE POULES',
+  'LOTISSEMENT ZONE INDUSTRIELLE',
+  'LOTISSEMENT TAWENZA'
 ];
 
 const officialPortfolioData = [
@@ -88,8 +116,8 @@ const officialPortfolioData = [
   },
   {
     id:'official-11', project:'APART HÔTEL NADOR', category:'Hôtel', city:'Nador, Maroc', year:2026, status:'Portfolio',
-    description:"L’apart-hôtel adopte une volumétrie compacte adaptée à un tissu urbain dense. Les balcons, le traitement vertical de façade et le rez-de-chaussée transparent renforcent le confort, l’identité et la lisibilité de l’établissement.",
-    programme:"Compacité / hospitalité urbaine / rythme des balcons", images:[]
+    description:"Implanté sur une parcelle compacte de 120 m² à Nador, l’apart-hôtel développe une volumétrie verticale adaptée au tissu urbain. Les balcons superposés, le traitement contrasté de la façade et le rez-de-chaussée largement vitré renforcent la lisibilité de l’établissement et la qualité des hébergements.",
+    programme:"Terrain 120 m² / compacité / hospitalité urbaine / rythme des balcons", images:[]
   },
   {
     id:'official-12', project:'HÔTEL RELAXE TARFAYA', category:'Hôtel', city:'Tarfaya, Maroc', year:2026, status:'Portfolio',
@@ -140,6 +168,17 @@ const officialPortfolioData = [
     id:'official-21', project:'USINE DE COUVOIR DE POULES', category:'Industrie', city:'Maroc', year:2026, status:'Portfolio',
     description:"Le couvoir est conçu à partir d’une logique de process et de séparation des flux. L’enveloppe sobre et continue accompagne une organisation intérieure fonctionnelle, tandis que les zones de réception, traitement, expédition et maintenance s’inscrivent dans une lecture claire du site.",
     programme:"Process sanitaire / séparation des flux / architecture fonctionnelle", images:[]
+  }
+  ,
+  {
+    id:'official-22', project:'LOTISSEMENT ZONE INDUSTRIELLE', category:'Urbanisme', city:'', year:2026, status:'Étude',
+    description:"Étude d’aménagement d’un lotissement à vocation industrielle, structurée autour de la lisibilité parcellaire, de l’accessibilité et de l’organisation des circulations. La composition vise à faciliter les flux, les accès techniques et l’évolution des activités.",
+    programme:"Aménagement / parcellaire / accessibilité / voirie", images:[]
+  },
+  {
+    id:'official-23', project:'LOTISSEMENT TAWENZA', category:'Urbanisme', city:'Tawenza', year:2026, status:'Étude',
+    description:"Projet de lotissement et d’aménagement urbain fondé sur une organisation claire des parcelles, des voies et des espaces communs, avec une attention portée à la lisibilité des accès et à la cohérence de la trame urbaine.",
+    programme:"Urbanisme / voirie / trame parcellaire / espaces communs", images:[]
   }
 ];
 
@@ -201,12 +240,9 @@ function renderProjects() {
 
   grid.innerHTML = list.map(p => {
     const image = bestImage(p);
-    const idx = spriteIndex(p);
     const imageHtml = image
-      ? `<img src="${esc(image)}" alt="${esc(p.project || 'Projet architectural')}" loading="lazy">`
-      : idx >= 0
-        ? `<div class="projectSprite" style="${spriteStyle(idx)}" role="img" aria-label="${esc(p.project || 'Projet architectural')}"></div>`
-        : `<div class="projectPlaceholder"><span>RSE</span></div>`;
+      ? `<img src="${esc(image)}" alt="${esc(p.project || 'Projet architectural')}" loading="lazy" decoding="async">`
+      : `<div class="projectPlaceholder" role="img" aria-label="${esc(p.project || 'Projet architectural')}"><span>RSE</span><small>URBANISME</small></div>`;
 
     const meta = [p.city, p.year].filter(Boolean).join(' · ');
     return `
@@ -285,13 +321,8 @@ function openProject(id) {
   renderGallery(0);
 
   if (!currentGallery.length) {
-    const idx = spriteIndex(p);
     const sprite = $('modalSprite');
-    if (sprite && idx >= 0) {
-      sprite.setAttribute('style', spriteStyle(idx));
-      sprite.setAttribute('aria-label', p.project || 'Projet architectural');
-      sprite.classList.remove('hidden');
-    }
+    if (sprite) sprite.classList.add('hidden');
   }
 
   $('modalImage').alt = p.project || 'Projet architectural';
