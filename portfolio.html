@@ -33,7 +33,9 @@
     <a href="/#architect">Architecte</a>
     <a href="/#services">Services</a>
     <a href="/portfolio.html">Portfolio</a>
+    <a href="/livre.html">Le livre</a>
     <a href="/#contact">Contact</a>
+    <div class="langSwitch" aria-label="Langue"><button data-lang="fr" class="active">FR</button><button data-lang="ar">AR</button><button data-lang="en">EN</button></div>
   </nav>
 </header>
 <main class="portfolioPageMain">
@@ -470,5 +472,6 @@ document.querySelectorAll('.staticProjectCard').forEach(card=>{
   card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openStaticProject(card);}});
 });
 </script>
+<script src="/site-i18n.js?v=20261003"></script>
 </body>
 </html>
