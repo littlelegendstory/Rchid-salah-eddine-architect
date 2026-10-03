@@ -11,8 +11,45 @@ const esc = value => (value ?? '').toString().replace(/[&<>"']/g, m => ({
 
 const localProjectImages = {
   'Showrooms commerciaux R+1': ['/assets/showroom-luxury.jpg'],
-  'Complexe touristique Aïn Toto': ['/assets/ain-toto.jpg']
+  'Complexe touristique Aïn Toto': ['/assets/ain-toto.jpg'],
+  'COMPLEXE TOURISTIQUE AÏN TOTO': ['/assets/ain-toto.jpg']
 };
+
+const officialPortfolioOrder = [
+  'VILLA CONTEMPORAINE HALLALA',
+  'VILLA HIKMA',
+  'VILLA RIAD ALMANZAH',
+  'VILLA ABRAJ',
+  'VILLA CONTEMPORAINE',
+  'IMMEUBLE RÉSIDENTIEL JNANE KAMILIA',
+  '220 LOGEMENTS',
+  'IMMEUBLE HAMRYA',
+  'PLATEAUX BUREAUX KÉNITRA',
+  'CENTRE COMMERCIAL ATTAYSSIR',
+  'APART HÔTEL NADOR',
+  'HÔTEL RELAXE TARFAYA',
+  'COMPLEXE TOURISTIQUE AÏN TOTO',
+  'CENTRE DE JOUR SOCIO-ÉDUCATIF',
+  'SIÈGE DE SCOLARITÉ - FST MOHAMMEDIA',
+  'STATION DES SERVICES - AÏT MOUSSA OU ALI',
+  'STATION DE SERVICES & COMPLEXE DE LOISIRS',
+  'UNITÉ DE STOCKAGE & FROID INDUSTRIEL',
+  'USINE DE SÉCHAGE DE FIENTE',
+  'POULAILLER DE POULES REPRODUCTRICES',
+  'USINE DE COUVOIR DE POULES'
+];
+
+function spriteIndex(project) {
+  return officialPortfolioOrder.indexOf(project?.project);
+}
+
+function spriteStyle(index) {
+  const col = index % 3;
+  const row = Math.floor(index / 3);
+  const x = col * 50;
+  const y = row * (100 / 6);
+  return `--sprite-x:${x}%;--sprite-y:${y}%;`;
+}
 
 function fallbackImages(project) {
   return localProjectImages[project?.project] || [];
@@ -64,9 +101,12 @@ function renderProjects() {
 
   grid.innerHTML = list.map(p => {
     const image = bestImage(p);
+    const idx = spriteIndex(p);
     const imageHtml = image
       ? `<img src="${esc(image)}" alt="${esc(p.project || 'Projet architectural')}" loading="lazy">`
-      : `<div class="projectPlaceholder"><span>RSE</span></div>`;
+      : idx >= 0
+        ? `<div class="projectSprite" style="${spriteStyle(idx)}" role="img" aria-label="${esc(p.project || 'Projet architectural')}"></div>`
+        : `<div class="projectPlaceholder"><span>RSE</span></div>`;
 
     const meta = [p.city, p.year].filter(Boolean).join(' · ');
     return `
@@ -103,6 +143,8 @@ function projectImages(project) {
 
 function renderGallery(index = 0) {
   const modalImage = $('modalImage');
+  const modalSprite = $('modalSprite');
+  modalSprite?.classList.add('hidden');
   const thumbs = $('modalThumbs');
   const prev = $('prevImage');
   const next = $('nextImage');
@@ -141,6 +183,16 @@ function openProject(id) {
   currentGallery = projectImages(p);
   currentGalleryIndex = 0;
   renderGallery(0);
+
+  if (!currentGallery.length) {
+    const idx = spriteIndex(p);
+    const sprite = $('modalSprite');
+    if (sprite && idx >= 0) {
+      sprite.setAttribute('style', spriteStyle(idx));
+      sprite.setAttribute('aria-label', p.project || 'Projet architectural');
+      sprite.classList.remove('hidden');
+    }
+  }
 
   $('modalImage').alt = p.project || 'Projet architectural';
 
