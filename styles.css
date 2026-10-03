@@ -194,3 +194,55 @@ img{max-width:100%;display:block}
   .portfolioPageHero{padding:58px 20px 40px}
   .portfolioPageHero h1{letter-spacing:-2px}
 }
+
+/* Final presentation polish — transparent premium identity */
+.brandLogo{
+  width:250px!important;
+  height:72px!important;
+  object-fit:contain!important;
+  object-position:left center;
+  background:transparent!important;
+  padding:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+.heroLogo{
+  width:min(720px,88vw)!important;
+  max-width:88vw!important;
+  height:auto!important;
+  object-fit:contain;
+  object-position:left center;
+  background:transparent!important;
+  padding:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  margin:0 0 24px!important;
+}
+.footerBrand img{
+  width:230px!important;
+  height:auto!important;
+  max-height:78px;
+  object-fit:contain!important;
+  object-position:left center;
+  background:transparent!important;
+  border-radius:0!important;
+}
+.topbar{min-height:86px}
+.portfolioPageBody .topbar{background:rgba(8,8,8,.96)}
+@media(max-width:800px){
+  .topbar{min-height:72px;padding:10px 16px}
+  .brandLogo{width:190px!important;height:54px!important}
+  .heroLogo{width:min(560px,92vw)!important;max-width:92vw!important;margin-bottom:18px!important}
+  .footerBrand img{width:180px!important;max-height:64px}
+  .heroContent{padding-top:20px}
+}
+@media(max-width:430px){
+  .brandLogo{width:170px!important;height:50px!important}
+  .heroLogo{width:92vw!important}
+}
+
+/* Exact official portfolio spread sprite */
+.projectSprite,.modalSprite{
+  background-image:url('/assets/portfolio-2026-sprite.jpg')!important;
+  background-size:300% 700%!important;
+}
