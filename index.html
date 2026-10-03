@@ -18,9 +18,8 @@
 </head>
 <body>
 <header class="topbar">
-  <a class="brand" href="#home">
-    <img class="brandLogo" src="/assets/rchid-salah-eddine-logo.png" alt="RCHID SALAH EDDINE Architecte">
-    <span class="brandText"><strong>RCHID SALAH EDDINE</strong><small>ARCHITECTE</small></span>
+  <a class="brand" href="#home" aria-label="RCHID SALAH EDDINE Architecte — Accueil">
+    <img class="brandLogo" src="/assets/rchid-salah-eddine-logo.png" alt="Logo RCHID SALAH EDDINE Architecte">
   </a>
   <button class="menuBtn" onclick="document.body.classList.toggle('menuOpen')">☰</button>
   <nav>
@@ -28,7 +27,7 @@
     <a href="#about">Agence</a>
     <a href="#architect">Architecte</a>
     <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
+    <a href="/portfolio.html">Portfolio</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -37,11 +36,12 @@
 <section id="home" class="hero">
   <div class="heroOverlay"></div>
   <div class="heroContent">
+    <img class="heroLogo" src="/assets/rchid-salah-eddine-logo.png" alt="RCHID SALAH EDDINE Architecte">
     <div class="eyebrow">ARCHITECTURE • URBANISME • DESIGN</div>
     <h1>Concevoir des espaces<br><em>qui traversent le temps.</em></h1>
     <p>Architecture contemporaine, projets résidentiels, hôteliers, commerciaux et urbains au Maroc.</p>
     <div class="heroActions">
-      <a class="btn primary" href="#portfolio">Voir les projets</a>
+      <a class="btn primary" href="/portfolio.html">Voir le portfolio</a>
       <a class="btn ghost" href="#contact">Parler d’un projet</a>
     </div>
   </div>
@@ -90,27 +90,18 @@
   </div>
 </section>
 
-<section id="portfolio" class="section portfolioSection">
+<section id="portfolio" class="section portfolioTeaser">
   <div class="sectionLabel">04 — PORTFOLIO</div>
-  <div class="portfolioIntro">
+  <div class="portfolioTeaserGrid">
     <div>
-      <h2>Nos projets</h2>
+      <h2>Une sélection de projets.<br>Le portfolio complet à part.</h2>
     </div>
     <div>
-      <p>Un portfolio transversal réunissant villas et logements, hôtels et complexes touristiques, commerces et showrooms, équipements, industrie, aménagement intérieur et projets urbains.</p>
-      <p>Chaque projet illustre une recherche différente autour du site, du programme, de la matière, de la lumière et de l’identité architecturale.</p>
+      <p>Villas, immeubles, hôtels, commerces, équipements, complexes touristiques et projets industriels.</p>
+      <p>Accédez au portfolio pour découvrir l’ensemble des projets, leurs localisations et leurs partis architecturaux.</p>
+      <a class="btn portfolioBtn" href="/portfolio.html">Découvrir le portfolio</a>
     </div>
   </div>
-  <div class="portfolioHead portfolioFilterHead">
-    <h3>Explorer les projets</h3>
-    <div id="filters" class="filters">
-      <button class="active" data-filter="Tous">Tous</button>
-    </div>
-  </div>
-
-  <div id="loading" class="loading">Chargement des projets...</div>
-  <div id="portfolioGrid" class="portfolioGrid"></div>
-  <div id="portfolioEmpty" class="empty hidden">Aucun projet publié pour le moment.</div>
 </section>
 
 <section class="quoteBand">
@@ -151,26 +142,10 @@
   <div>Architecture • Urbanisme • Design</div>
 </footer>
 
-<div id="projectModal" class="modal hidden" onclick="if(event.target===this)closeProject()">
-  <div class="modalCard">
-    <button class="closeBtn" onclick="closeProject()">×</button>
-    <div class="modalMedia">
-      <button id="prevImage" class="galleryNav galleryPrev" type="button" aria-label="Image précédente">‹</button>
-      <img id="modalImage" alt="">
-      <div id="modalSprite" class="modalSprite hidden" role="img"></div>
-      <button id="nextImage" class="galleryNav galleryNext" type="button" aria-label="Image suivante">›</button>
-    </div>
-    <div id="modalThumbs" class="modalThumbs"></div>
-    <div class="modalContent">
-      <div id="modalType" class="eyebrow darkText"></div>
-      <h3 id="modalTitle"></h3>
-      <div class="projectMetaDetail"><span>Localisation / adresse</span><p id="modalLocation"></p></div>
-      <p id="modalDescription"></p>
-      <div id="modalProgrammeWrap" class="modalProgramme hidden"><span>Parti / vue architecturale</span><p id="modalProgramme"></p></div>
-    </div>
-  </div>
-</div>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelectorAll('nav a').forEach(a => a.addEventListener('click', () => document.body.classList.remove('menuOpen')));
+</script>
 
-<script src="app.js"></script>
 </body>
 </html>
