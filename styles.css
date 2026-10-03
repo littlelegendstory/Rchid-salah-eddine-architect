@@ -416,3 +416,21 @@ img{max-width:100%;display:block}
   .portfolioGrid .project{aspect-ratio:1.15/1!important}
   .projectPlaceholder span{font-size:36px}
 }
+
+/* Final homepage architectural hero */
+.hero{
+  background-image:
+    linear-gradient(90deg,rgba(5,5,5,.82) 0%,rgba(8,8,8,.52) 48%,rgba(8,8,8,.18) 100%),
+    url('https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/a06c871b-8811-49b4-bf8c-595a94d6354f.jpg')!important;
+  background-size:cover!important;
+  background-position:center!important;
+}
+.heroOverlay{background:linear-gradient(to top,rgba(0,0,0,.48),transparent 55%)!important}
+@media(max-width:800px){
+  .hero{
+    background-position:58% center!important;
+    background-image:
+      linear-gradient(90deg,rgba(5,5,5,.82),rgba(8,8,8,.40)),
+      url('https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/a06c871b-8811-49b4-bf8c-595a94d6354f.jpg')!important;
+  }
+}
