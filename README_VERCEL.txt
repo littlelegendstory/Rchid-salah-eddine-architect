@@ -15,3 +15,5 @@ Variables d'environnement à ajouter dans Vercel:
 
 Le site appelle /api/portfolio. Seuls les projets dont le champ "Publié" est coché sont renvoyés au site public.
 Ne jamais mettre AIRTABLE_TOKEN dans app.js, index.html ou un dépôt public.
+
+Production refresh: official portfolio 2026 synced.
