@@ -151,7 +151,12 @@
 <div id="projectModal" class="modal hidden" onclick="if(event.target===this)closeProject()">
   <div class="modalCard">
     <button class="closeBtn" onclick="closeProject()">×</button>
-    <img id="modalImage" alt="">
+    <div class="modalMedia">
+      <button id="prevImage" class="galleryNav galleryPrev" type="button" aria-label="Image précédente">‹</button>
+      <img id="modalImage" alt="">
+      <button id="nextImage" class="galleryNav galleryNext" type="button" aria-label="Image suivante">›</button>
+    </div>
+    <div id="modalThumbs" class="modalThumbs"></div>
     <div class="modalContent">
       <div id="modalType" class="eyebrow darkText"></div>
       <h3 id="modalTitle"></h3>
