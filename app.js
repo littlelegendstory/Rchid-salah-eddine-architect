@@ -1,6 +1,8 @@
 const API = '/api/portfolio';
 let projects = [];
 let activeFilter = 'Tous';
+let currentGallery = [];
+let currentGalleryIndex = 0;
 
 const $ = id => document.getElementById(id);
 const esc = value => (value ?? '').toString().replace(/[&<>"']/g, m => ({
@@ -83,17 +85,54 @@ function renderProjects() {
   $('portfolioEmpty').classList.toggle('hidden', list.length > 0);
 }
 
+function projectImages(project) {
+  return Array.isArray(project.images)
+    ? project.images.map(img => img?.url || '').filter(Boolean)
+    : [];
+}
+
+function renderGallery(index = 0) {
+  const modalImage = $('modalImage');
+  const thumbs = $('modalThumbs');
+  const prev = $('prevImage');
+  const next = $('nextImage');
+
+  if (!currentGallery.length) {
+    modalImage.classList.add('hidden');
+    thumbs.innerHTML = '';
+    prev.classList.add('hidden');
+    next.classList.add('hidden');
+    return;
+  }
+
+  currentGalleryIndex = (index + currentGallery.length) % currentGallery.length;
+  modalImage.classList.remove('hidden');
+  modalImage.src = currentGallery[currentGalleryIndex];
+
+  const multiple = currentGallery.length > 1;
+  prev.classList.toggle('hidden', !multiple);
+  next.classList.toggle('hidden', !multiple);
+
+  thumbs.innerHTML = currentGallery.map((src, i) =>
+    `<button type="button" class="modalThumb ${i === currentGalleryIndex ? 'active' : ''}" data-index="${i}" aria-label="Voir image ${i + 1}">
+      <img src="${esc(src)}" alt="" loading="lazy">
+    </button>`
+  ).join('');
+
+  thumbs.querySelectorAll('.modalThumb').forEach(btn => {
+    btn.addEventListener('click', () => renderGallery(Number(btn.dataset.index)));
+  });
+}
+
 function openProject(id) {
   const p = projects.find(x => x.id === id);
   if (!p) return;
 
-  const image = bestImage(p);
-  const modalImage = $('modalImage');
-  modalImage.classList.toggle('hidden', !image);
-  if (image) {
-    modalImage.src = image;
-    modalImage.alt = p.project || 'Projet architectural';
-  }
+  currentGallery = projectImages(p);
+  currentGalleryIndex = 0;
+  renderGallery(0);
+
+  $('modalImage').alt = p.project || 'Projet architectural';
 
   $('modalTitle').textContent = p.project || 'Projet';
   $('modalType').textContent = [p.category, p.status].filter(Boolean).join(' · ') || 'ARCHITECTURE';
@@ -137,3 +176,7 @@ function enhanceHero() {
     hero.style.backgroundPosition = 'center';
   }
 }
+
+
+$('prevImage')?.addEventListener('click', () => renderGallery(currentGalleryIndex - 1));
+$('nextImage')?.addEventListener('click', () => renderGallery(currentGalleryIndex + 1));
