@@ -19,3 +19,5 @@ Ne jamais mettre AIRTABLE_TOKEN dans app.js, index.html ou un dépôt public.
 Production refresh: official portfolio 2026 synced.
 
 Refresh: complete 21-project portfolio embedded in site fallback.
+
+Refresh: strict official portfolio order and render mapping.
