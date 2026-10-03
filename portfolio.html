@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0d0d0d">
+  <title>Portfolio — RCHID SALAH EDDINE Architecte</title>
+  <meta name="description" content="RCHID SALAH EDDINE — Architecte. Architecture, urbanisme, villas, hôtels, commerces, industrie et aménagement.">
+  <link rel="icon" type="image/png" href="/assets/rchid-salah-eddine-logo.png">
+  <link rel="apple-touch-icon" href="/assets/rchid-salah-eddine-logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://www.rsearchitecte.art/portfolio.html">
+  <meta property="og:title" content="Portfolio — RCHID SALAH EDDINE Architecte">
+  <meta property="og:description" content="Architecture contemporaine, villas, hôtels, commerces, industrie et aménagement au Maroc.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.rsearchitecte.art/portfolio.html">
+  <meta name="robots" content="index,follow">
+</head>
+<body class="portfolioPageBody">
+<header class="topbar">
+  <a class="brand" href="/" aria-label="RCHID SALAH EDDINE Architecte — Accueil">
+    <img class="brandLogo" src="/assets/rchid-salah-eddine-logo.png" alt="Logo RCHID SALAH EDDINE Architecte">
+  </a>
+  <button class="menuBtn" onclick="document.body.classList.toggle('menuOpen')">☰</button>
+  <nav>
+    <a href="/#home">Accueil</a>
+    <a href="/#about">Agence</a>
+    <a href="/#architect">Architecte</a>
+    <a href="/#services">Services</a>
+    <a href="/portfolio.html">Portfolio</a>
+    <a href="/#contact">Contact</a>
+  </nav>
+</header>
+<main class="portfolioPageMain">
+<section class="portfolioPageHero">
+  <div class="sectionLabel">RCHID SALAH EDDINE — ARCHITECTE</div>
+  <h1>Portfolio</h1>
+  <p>Découvrez l’ensemble des projets de l’agence, classés par typologie.</p>
+  <a class="portfolioBack" href="/">← Retour à l’accueil</a>
+</section>
+<section id="portfolio" class="section portfolioSection">
+  <div class="sectionLabel">PORTFOLIO COMPLET</div>
+  <div class="portfolioIntro">
+    <div>
+      <h2>Nos projets</h2>
+    </div>
+    <div>
+      <p>Un portfolio transversal réunissant villas et logements, hôtels et complexes touristiques, commerces et showrooms, équipements, industrie, aménagement intérieur et projets urbains.</p>
+      <p>Chaque projet illustre une recherche différente autour du site, du programme, de la matière, de la lumière et de l’identité architecturale.</p>
+    </div>
+  </div>
+  <div class="portfolioHead portfolioFilterHead">
+    <h3>Explorer les projets</h3>
+    <div id="filters" class="filters">
+      <button class="active" data-filter="Tous">Tous</button>
+    </div>
+  </div>
+
+  <div id="loading" class="loading">Chargement des projets...</div>
+  <div id="portfolioGrid" class="portfolioGrid"></div>
+  <div id="portfolioEmpty" class="empty hidden">Aucun projet publié pour le moment.</div>
+</section>
+
+
+</main>
+<a class="floatingWhatsApp" href="https://wa.me/212664171210" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">WhatsApp</a>
+<footer>
+  <div class="footerBrand"><img src="/assets/rchid-salah-eddine-logo.png" alt="RCHID SALAH EDDINE Architecte"><span>© <span id="year"></span> RCHID SALAH EDDINE • ARCHITECTE</span></div>
+  <div>Architecture • Urbanisme • Design</div>
+</footer>
+<div id="projectModal" class="modal hidden" onclick="if(event.target===this)closeProject()">
+  <div class="modalCard">
+    <button class="closeBtn" onclick="closeProject()">×</button>
+    <div class="modalMedia">
+      <button id="prevImage" class="galleryNav galleryPrev" type="button" aria-label="Image précédente">‹</button>
+      <img id="modalImage" alt="">
+      <div id="modalSprite" class="modalSprite hidden" role="img"></div>
+      <button id="nextImage" class="galleryNav galleryNext" type="button" aria-label="Image suivante">›</button>
+    </div>
+    <div id="modalThumbs" class="modalThumbs"></div>
+    <div class="modalContent">
+      <div id="modalType" class="eyebrow darkText"></div>
+      <h3 id="modalTitle"></h3>
+      <div class="projectMetaDetail"><span>Localisation / adresse</span><p id="modalLocation"></p></div>
+      <p id="modalDescription"></p>
+      <div id="modalProgrammeWrap" class="modalProgramme hidden"><span>Parti / vue architecturale</span><p id="modalProgramme"></p></div>
+    </div>
+  </div>
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
