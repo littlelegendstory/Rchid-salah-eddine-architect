@@ -152,3 +152,45 @@ img{max-width:100%;display:block}
   .footerBrand{align-items:flex-start}
   .footerBrand img{width:52px;height:52px}
 }
+
+
+/* Dedicated portfolio page + stronger official logo visibility */
+.brandLogo{
+  width:168px;
+  height:64px;
+  object-fit:contain;
+  display:block;
+  background:#fff;
+  padding:5px 9px;
+  border-radius:4px;
+  box-shadow:0 4px 18px rgba(0,0,0,.14);
+}
+.heroLogo{
+  width:220px;
+  max-width:72vw;
+  height:auto;
+  background:#fff;
+  padding:8px 12px;
+  border-radius:4px;
+  margin:0 0 28px;
+  box-shadow:0 10px 30px rgba(0,0,0,.22);
+}
+.portfolioTeaser{background:#f5f3ef}
+.portfolioTeaserGrid{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:start}
+.portfolioTeaserGrid p{font-size:17px;line-height:1.8;color:#555;margin-top:0}
+.portfolioBtn{margin-top:12px;background:#111!important;color:#fff!important;border-color:#111!important}
+.portfolioPageBody .topbar{background:#0b0b0b}
+.portfolioPageMain{padding-top:86px}
+.portfolioPageHero{padding:84px 7vw 54px;background:#111;color:#fff}
+.portfolioPageHero h1{font-size:clamp(54px,9vw,110px);font-weight:300;letter-spacing:-3px;margin:0 0 18px}
+.portfolioPageHero p{max-width:680px;color:#cfcfcf;font-size:17px;line-height:1.7}
+.portfolioBack{display:inline-block;margin-top:18px;font-size:12px;letter-spacing:1px;color:#d9c39e}
+.portfolioPageBody .portfolioSection{padding-top:72px}
+@media(max-width:800px){
+  .brandLogo{width:132px;height:52px;padding:4px 7px}
+  .heroLogo{width:178px;margin-bottom:22px}
+  .portfolioTeaserGrid{grid-template-columns:1fr;gap:24px}
+  .portfolioPageMain{padding-top:72px}
+  .portfolioPageHero{padding:58px 20px 40px}
+  .portfolioPageHero h1{letter-spacing:-2px}
+}
