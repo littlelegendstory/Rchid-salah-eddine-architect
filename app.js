@@ -9,11 +9,7 @@ const esc = value => (value ?? '').toString().replace(/[&<>"']/g, m => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
 }[m]));
 
-const localProjectImages = {
-  'Showrooms commerciaux R+1': ['/assets/showroom-luxury.jpg'],
-  'Complexe touristique Aïn Toto': ['/assets/ain-toto.jpg'],
-  'COMPLEXE TOURISTIQUE AÏN TOTO': ['/assets/ain-toto.jpg']
-};
+const localProjectImages = {};
 
 const officialPortfolioOrder = [
   'VILLA CONTEMPORAINE HALLALA',
@@ -169,22 +165,14 @@ function bestImage(project) {
 }
 
 async function loadProjects() {
-  try {
-    const response = await fetch(API, { headers: { Accept: 'application/json' } });
-    if (!response.ok) throw new Error('API');
-    const data = await response.json();
-    projects = Array.isArray(data.records) && data.records.length ? data.records : officialPortfolioData;
-    $('loading').classList.add('hidden');
-    buildFilters();
-    renderProjects();
-    enhanceHero();
-  } catch (error) {
-    projects = officialPortfolioData;
-    $('loading').classList.add('hidden');
-    buildFilters();
-    renderProjects();
-    enhanceHero();
-  }
+  projects = officialPortfolioData
+    .slice()
+    .sort((a, b) => officialPortfolioOrder.indexOf(a.project) - officialPortfolioOrder.indexOf(b.project));
+
+  $('loading').classList.add('hidden');
+  buildFilters();
+  renderProjects();
+  enhanceHero();
 }
 
 function buildFilters() {
@@ -225,7 +213,7 @@ function renderProjects() {
       <article class="project" data-id="${esc(p.id)}" tabindex="0" role="button" aria-label="Voir ${esc(p.project || 'le projet')}">
         ${imageHtml}
         <div class="projectOverlay">
-          <small>${esc(p.category || 'Architecture')}</small>
+          <small>${String(officialPortfolioOrder.indexOf(p.project) + 1).padStart(2,'0')} · ${esc(p.category || 'Architecture')}</small>
           <h3>${esc(p.project || 'Projet')}</h3>
           <p>${esc(meta || 'Maroc')}</p>
         </div>
