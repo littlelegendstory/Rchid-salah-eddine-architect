@@ -111,3 +111,25 @@ img{max-width:100%;display:block}
   .galleryPrev{left:8px}.galleryNext{right:8px}
   .modalThumb{min-width:72px;width:72px;height:50px}
 }
+
+/* Official portfolio 2026 presentation-sheet visuals */
+.projectSprite,.modalSprite{
+  background-image:url('/assets/portfolio-2026-sprite.jpg');
+  background-repeat:no-repeat;
+  background-size:300% 700%;
+  background-position:var(--sprite-x,0%) var(--sprite-y,0%);
+}
+.projectSprite{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  transition:transform .5s ease;
+}
+.project:hover .projectSprite{transform:scale(1.03)}
+.modalSprite{
+  width:100%;
+  aspect-ratio:1.413/1;
+  max-height:64vh;
+  background-color:#111;
+}
