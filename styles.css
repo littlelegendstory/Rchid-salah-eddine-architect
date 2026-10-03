@@ -461,3 +461,32 @@ img{max-width:100%;display:block}
  .brandLogo{width:150px!important;height:50px!important;max-width:58vw!important}
  .heroLogo{width:200px!important;max-width:70vw!important}
 }
+
+/* === VISIBLE OFFICIAL LOGO LOCKUP === */
+.brand{display:flex!important;align-items:center!important;gap:12px!important;text-decoration:none!important}
+.brandLogoBadge{width:54px;height:54px;display:grid;place-items:center;background:#f7f4ee;border-radius:3px;flex:0 0 auto;overflow:hidden}
+.brandLogo{width:48px!important;height:48px!important;max-width:none!important;object-fit:contain!important;background:transparent!important;padding:0!important;border:0!important;box-shadow:none!important}
+.brandIdentity{display:flex;flex-direction:column;line-height:1.04}
+.brandIdentity strong{font-size:12px;letter-spacing:1.7px;color:#fff;font-weight:600;white-space:nowrap}
+.brandIdentity small{font-size:8px;letter-spacing:4px;color:#c6ad82;margin-top:6px;white-space:nowrap}
+.heroBrandLockup{display:flex;align-items:center;gap:18px;margin:0 0 22px}
+.heroLogoBadge{width:88px;height:88px;display:grid;place-items:center;background:#f7f4ee;border-radius:4px;flex:0 0 auto}
+.heroLogo{width:80px!important;height:80px!important;max-width:none!important;object-fit:contain!important;background:transparent!important;padding:0!important;margin:0!important;box-shadow:none!important}
+.heroBrandLockup strong{display:block;color:#fff;font-size:18px;letter-spacing:2.2px;font-weight:600}
+.heroBrandLockup small{display:block;color:#d9c39e;font-size:9px;letter-spacing:5px;margin-top:7px}
+@media(max-width:800px){
+  .brand{gap:9px!important}
+  .brandLogoBadge{width:46px;height:46px}
+  .brandLogo{width:40px!important;height:40px!important}
+  .brandIdentity strong{font-size:10px;letter-spacing:1.2px}
+  .brandIdentity small{font-size:7px;letter-spacing:3px;margin-top:4px}
+  .heroBrandLockup{gap:13px;margin-bottom:18px}
+  .heroLogoBadge{width:70px;height:70px}
+  .heroLogo{width:64px!important;height:64px!important}
+  .heroBrandLockup strong{font-size:14px;letter-spacing:1.5px}
+  .heroBrandLockup small{font-size:8px;letter-spacing:4px}
+}
+@media(max-width:430px){
+  .brandIdentity strong{font-size:9px}
+  .brandIdentity small{letter-spacing:2.5px}
+}
