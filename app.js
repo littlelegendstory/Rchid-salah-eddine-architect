@@ -9,9 +9,18 @@ const esc = value => (value ?? '').toString().replace(/[&<>"']/g, m => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
 }[m]));
 
+const localProjectImages = {
+  'Showrooms commerciaux R+1': ['/assets/showroom-luxury.jpg'],
+  'Complexe touristique Aïn Toto': ['/assets/ain-toto.jpg']
+};
+
+function fallbackImages(project) {
+  return localProjectImages[project?.project] || [];
+}
+
 function bestImage(project) {
   const image = Array.isArray(project.images) ? project.images[0] : null;
-  return image?.thumbnails?.large?.url || image?.url || '';
+  return image?.thumbnails?.large?.url || image?.url || fallbackImages(project)[0] || '';
 }
 
 async function loadProjects() {
@@ -86,9 +95,10 @@ function renderProjects() {
 }
 
 function projectImages(project) {
-  return Array.isArray(project.images)
+  const remote = Array.isArray(project.images)
     ? project.images.map(img => img?.url || '').filter(Boolean)
     : [];
+  return remote.length ? remote : fallbackImages(project);
 }
 
 function renderGallery(index = 0) {
