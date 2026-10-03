@@ -33,7 +33,9 @@
     <a href="#architect">Architecte</a>
     <a href="#services">Services</a>
     <a href="/portfolio.html">Portfolio</a>
+    <a href="/livre.html">Le livre</a>
     <a href="#contact">Contact</a>
+    <div class="langSwitch" aria-label="Langue"><button data-lang="fr" class="active">FR</button><button data-lang="ar">AR</button><button data-lang="en">EN</button></div>
   </nav>
 </header>
 
@@ -116,12 +118,47 @@
   </div>
 </section>
 
+
+<section id="book" class="section bookFeature">
+  <div class="sectionLabel">05 — IMPORTANCE DE L’ARCHITECTURE</div>
+  <div class="bookFeatureGrid">
+    <a class="bookVisual" href="/livre.html" aria-label="Découvrir le livre">
+      <div class="bookCoverMock">
+        <span class="bookEdition">PARTIE 1 / 3</span>
+        <div class="bookCoverTitle">L’HOMME<br>LA CIVILISATION<br><em>ET L’ARCHITECTURE</em></div>
+        <div class="bookCoverLine"></div>
+        <span class="bookPhase">PHASE I — L’HOMME</span>
+        <span class="bookAuthor">RCHID SALAH EDDINE · ARCHITECTE</span>
+      </div>
+      <span class="bookVisualCta">Découvrir le livre →</span>
+    </a>
+    <div class="bookFeatureCopy">
+      <div class="eyebrow darkText">ARCHITECTURE & CIVILISATION</div>
+      <h2>L’architecture commence<br>par la compréhension de l’homme.</h2>
+      <div class="bookMeta">
+        <div><span>Objet</span><strong>L’architecture dans notre civilisation</strong></div>
+        <div><span>Livre</span><strong>L’Homme, la Civilisation et l’Architecture</strong></div>
+        <div><span>Auteur</span><strong>Rchid Salah Eddine</strong></div>
+        <div><span>Profession</span><strong>Architecte</strong></div>
+        <div><span>Édition</span><strong>Partie 1 / 3</strong></div>
+        <div><span>Phase</span><strong>L’Homme</strong></div>
+      </div>
+      <p>L’architecture ne se limite pas à construire des murs, des maisons ou des villes. Elle influence notre manière de vivre, de penser, de nous rencontrer, de nous protéger et de transmettre notre culture.</p>
+      <p>Cette première partie commence par l’être humain : ses besoins, sa mémoire, ses choix, son adaptation et sa relation à l’espace. Une invitation à comprendre non seulement <em>comment</em> nous construisons, mais surtout <em>pourquoi</em> nous construisons — et comment l’architecture peut participer à la civilisation.</p>
+      <div class="bookActions">
+        <a class="btn portfolioBtn" href="/livre.html">Découvrir le livre</a>
+        <a class="btn primary" href="https://www.amazon.com/dp/B0H867FPFJ" target="_blank" rel="noopener">Acheter sur Amazon</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="quoteBand">
   <blockquote>« Une architecture réussie ne se contente pas d’être vue. Elle organise la vie. »</blockquote>
 </section>
 
 <section class="section processSection">
-  <div class="sectionLabel">05 — NOTRE MÉTHODE</div>
+  <div class="sectionLabel">06 — NOTRE MÉTHODE</div>
   <h2>Du contexte à l’espace construit.</h2>
   <div class="processGrid">
     <article><span>01</span><h3>Écouter</h3><p>Programme, besoins, budget, contraintes et ambitions du maître d’ouvrage.</p></article>
@@ -132,7 +169,7 @@
 </section>
 
 <section id="contact" class="section contact">
-  <div class="sectionLabel">06 — CONTACT</div>
+  <div class="sectionLabel">07 — CONTACT</div>
   <div class="twoCols">
     <div>
       <h2>Vous avez un projet ?</h2>
@@ -159,5 +196,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
 document.querySelectorAll('nav a').forEach(a => a.addEventListener('click', () => document.body.classList.remove('menuOpen')));
 </script>
 
+<script src="/site-i18n.js?v=20261003"></script>
 </body>
 </html>
