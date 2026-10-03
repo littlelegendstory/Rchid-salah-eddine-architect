@@ -573,3 +573,87 @@ img{max-width:100%;display:block}
     max-width:64vw!important;
   }
 }
+
+/* === FINAL TOP BAR BRANDING === */
+.topbar{
+  min-height:82px!important;
+  height:82px!important;
+  padding:10px 24px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  background:rgba(8,8,8,.97)!important;
+  border-bottom:1px solid rgba(255,255,255,.08)!important;
+}
+.headerBrand{
+  display:flex!important;
+  align-items:center!important;
+  gap:12px!important;
+  min-width:0;
+  text-decoration:none!important;
+}
+.headerLogoMark{
+  width:76px!important;
+  height:54px!important;
+  max-width:none!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:transparent!important;
+  border:0!important;
+  padding:0!important;
+  margin:0!important;
+  filter:grayscale(1) brightness(2.6) contrast(.9)!important;
+  opacity:1!important;
+}
+.headerBrandText{
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  line-height:1!important;
+  min-width:0;
+}
+.headerBrandText strong{
+  color:#fff!important;
+  font-size:14px!important;
+  font-weight:600!important;
+  letter-spacing:2.2px!important;
+  white-space:nowrap;
+}
+.headerBrandText small{
+  color:#bdbdbd!important;
+  font-size:8px!important;
+  font-weight:500!important;
+  letter-spacing:5px!important;
+  margin-top:7px!important;
+  white-space:nowrap;
+}
+.menuBtn{
+  margin-left:auto!important;
+  color:#fff!important;
+  flex:0 0 auto!important;
+}
+.heroBrandLockupFinal{display:none!important}
+@media(max-width:800px){
+  .topbar{
+    min-height:76px!important;
+    height:76px!important;
+    padding:9px 18px!important;
+  }
+  .headerBrand{gap:9px!important;max-width:calc(100vw - 82px)!important}
+  .headerLogoMark{width:58px!important;height:46px!important}
+  .headerBrandText strong{
+    font-size:11px!important;
+    letter-spacing:1.7px!important;
+  }
+  .headerBrandText small{
+    font-size:7px!important;
+    letter-spacing:3.5px!important;
+    margin-top:5px!important;
+  }
+}
+@media(max-width:430px){
+  .topbar{padding:8px 14px!important}
+  .headerLogoMark{width:52px!important;height:42px!important}
+  .headerBrandText strong{font-size:10px!important;letter-spacing:1.2px!important}
+  .headerBrandText small{font-size:6.5px!important;letter-spacing:3px!important}
+}
