@@ -97,3 +97,17 @@ img{max-width:100%;display:block}
   .agencyValues,.processGrid{margin-top:36px}
   .portfolioIntro{gap:20px;margin-bottom:38px}
 }
+
+.modalMedia{position:relative;background:#111;display:grid;place-items:center}
+.modalMedia>img{width:100%;max-height:64vh;object-fit:contain;background:#111}
+.galleryNav{position:absolute;top:50%;transform:translateY(-50%);z-index:4;width:44px;height:44px;border:0;border-radius:999px;background:rgba(255,255,255,.9);color:#111;font-size:28px;line-height:1;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+.galleryPrev{left:14px}.galleryNext{right:14px}
+.modalThumbs{display:flex;gap:8px;padding:12px 16px;overflow-x:auto;background:#f5f3ef;border-bottom:1px solid var(--line)}
+.modalThumb{border:1px solid transparent;background:transparent;padding:0;min-width:84px;width:84px;height:58px;cursor:pointer;opacity:.62}
+.modalThumb.active{border-color:#111;opacity:1}
+.modalThumb img{width:100%;height:100%;object-fit:cover}
+@media(max-width:800px){
+  .galleryNav{width:38px;height:38px;font-size:24px}
+  .galleryPrev{left:8px}.galleryNext{right:8px}
+  .modalThumb{min-width:72px;width:72px;height:50px}
+}
