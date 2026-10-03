@@ -524,3 +524,31 @@ img{max-width:100%;display:block}
   .brandLogoWide{width:215px!important;max-width:66vw!important}
   .heroBrandLockupFinal{width:86vw}
 }
+
+/* Replace RS monogram with official logo */
+.architectLogoPanel{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  background:#0b0b0b!important;
+  overflow:hidden!important;
+  min-height:420px;
+  padding:48px!important;
+}
+.architectLogoPanel img{
+  display:block;
+  width:min(82%,620px);
+  height:auto;
+  object-fit:contain;
+  filter:none!important;
+  background:transparent!important;
+}
+@media(max-width:800px){
+  .architectLogoPanel{
+    min-height:300px;
+    padding:28px!important;
+  }
+  .architectLogoPanel img{
+    width:88%;
+  }
+}
