@@ -133,3 +133,7 @@ img{max-width:100%;display:block}
   max-height:64vh;
   background-color:#111;
 }
+
+/* Strict official portfolio ordering + visual integrity */
+.portfolioGrid .project{aspect-ratio:1.413/1}
+.projectSprite{background-size:300% 700%;background-position:var(--sprite-x,0%) var(--sprite-y,0%);background-repeat:no-repeat}
