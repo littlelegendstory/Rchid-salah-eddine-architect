@@ -687,3 +687,50 @@ img{max-width:100%;display:block}
 @media(max-width:430px){
   .headerLogoMark{width:48px!important;height:38px!important}
 }
+
+/* === CLIENT COMPLETE FINAL === */
+.hero{
+  position:relative!important;
+  overflow:hidden!important;
+  isolation:isolate;
+  background:
+    radial-gradient(circle at 77% 31%,rgba(224,184,111,.24) 0 6%,rgba(224,184,111,.07) 6.2% 13%,transparent 13.3%),
+    linear-gradient(145deg,#080808 0%,#151310 48%,#080808 100%)!important;
+}
+.heroOverlay{
+  z-index:1!important;
+  background:linear-gradient(90deg,rgba(5,5,5,.94) 0%,rgba(5,5,5,.70) 45%,rgba(5,5,5,.18) 100%)!important;
+}
+.heroGeometry{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.geoTriangle{position:absolute;width:52vw;height:66vh;right:5vw;top:10vh;clip-path:polygon(50% 0,100% 100%,0 100%);background:linear-gradient(145deg,rgba(218,195,154,.21),rgba(218,195,154,.035));filter:drop-shadow(0 0 1px rgba(238,211,159,.7))}
+.geoTriangleTwo{width:38vw;height:52vh;right:-3vw;top:28vh;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(205,172,112,.03));transform:rotate(18deg)}
+.geoSun{position:absolute;width:170px;height:170px;border-radius:50%;right:16vw;top:17vh;background:radial-gradient(circle at 40% 35%,#ffe8b4 0,#d8a958 35%,rgba(190,130,45,.2) 68%,transparent 70%);box-shadow:0 0 90px rgba(220,168,80,.30)}
+.geoAxis{position:absolute;height:1px;background:linear-gradient(90deg,transparent,rgba(224,198,148,.55),transparent);transform-origin:center}
+.geoAxisA{width:85vw;right:-14vw;top:48%;transform:rotate(-27deg)}
+.geoAxisB{width:65vw;right:3vw;top:36%;transform:rotate(90deg)}
+.geoArc{position:absolute;width:58vw;height:58vw;border:1px solid rgba(215,184,126,.28);border-radius:50%;right:-7vw;top:-7vw}
+.heroContent{position:relative;z-index:2!important}
+.section.dark,.quoteBand,.portfolioPageHero{position:relative!important;overflow:hidden!important}
+.section.dark::after,.quoteBand::after,.portfolioPageHero::after{
+  content:"";position:absolute;right:4%;bottom:4%;width:220px;height:170px;
+  background:url('/assets/rse-logo-icon-header-white.png?v=20261003-client-final') center/contain no-repeat;
+  opacity:.055;pointer-events:none;z-index:0
+}
+.section.dark>* , .quoteBand>* , .portfolioPageHero>*{position:relative;z-index:1}
+.footerBrand img{width:52px!important;height:42px!important;object-fit:contain!important;background:transparent!important;padding:0!important;border-radius:0!important}
+.staticProjectCard{cursor:pointer;transition:transform .22s ease,box-shadow .22s ease}
+.staticProjectCard:hover{transform:translateY(-3px);box-shadow:0 16px 42px rgba(0,0,0,.12)}
+.staticProjectCard:focus{outline:2px solid #b69a6b;outline-offset:3px}
+.modal:not(.hidden){display:flex!important}
+.modalMedia img{max-height:68vh;object-fit:contain;background:#0b0b0b}
+.modalThumbs button{border:0;background:none;padding:0;opacity:.55;cursor:pointer}
+.modalThumbs button.active{opacity:1}
+.modalThumbs img{width:72px;height:52px;object-fit:cover;display:block}
+body.modalOpen{overflow:hidden}
+@media(max-width:800px){
+  .geoTriangle{width:95vw;height:58vh;right:-28vw;top:16vh}
+  .geoTriangleTwo{width:72vw;height:48vh;right:-28vw;top:36vh}
+  .geoSun{width:115px;height:115px;right:11vw;top:17vh}
+  .geoArc{width:95vw;height:95vw;right:-38vw;top:4vh}
+  .section.dark::after,.quoteBand::after,.portfolioPageHero::after{width:150px;height:120px}
+}
