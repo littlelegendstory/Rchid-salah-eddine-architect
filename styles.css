@@ -246,3 +246,173 @@ img{max-width:100%;display:block}
   background-image:url('/assets/portfolio-2026-sprite.jpg')!important;
   background-size:300% 700%!important;
 }
+
+
+/* ===== FINAL CLIENT PRESENTATION 2026-10-03 ===== */
+.projectSprite,.modalSprite{
+  display:none!important;
+  background-image:none!important;
+}
+.portfolioGrid{
+  align-items:stretch;
+}
+.portfolioGrid .project{
+  aspect-ratio:16/10!important;
+  background:#111;
+  border-radius:2px;
+}
+.project>img{
+  position:absolute;
+  inset:0;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  background:#151515;
+}
+.projectOverlay{
+  z-index:2;
+  padding:64px 22px 20px;
+  background:linear-gradient(to top,rgba(0,0,0,.88) 0%,rgba(0,0,0,.38) 58%,transparent 100%);
+}
+.projectOverlay h3{
+  font-size:clamp(18px,1.7vw,25px);
+  line-height:1.12;
+}
+.projectPlaceholder{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  display:flex!important;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  background:
+    linear-gradient(135deg,rgba(182,154,106,.12),transparent 45%),
+    linear-gradient(145deg,#090909,#26221c);
+  color:#d7c09a;
+}
+.projectPlaceholder span{
+  font:400 46px/1 Georgia,serif;
+  letter-spacing:12px;
+}
+.projectPlaceholder small{
+  font-size:9px;
+  letter-spacing:5px;
+  color:#b69a6a;
+}
+.modalMedia{
+  min-height:220px;
+  background:#0d0d0d;
+}
+.modalMedia>img{
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:16/10;
+  max-height:72vh!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  background:#0d0d0d!important;
+}
+.modalCard{
+  border-radius:3px;
+  box-shadow:0 24px 80px rgba(0,0,0,.35);
+}
+.modalContent{
+  max-width:820px;
+  margin:0 auto;
+}
+.projectMetaDetail{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:14px 0;
+  margin:16px 0 20px;
+}
+.projectMetaDetail span{
+  display:block;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  color:#8b7b62;
+}
+.projectMetaDetail p{margin:5px 0 0!important}
+.brandLogo{
+  width:210px!important;
+  height:60px!important;
+  max-width:42vw!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+  background:transparent!important;
+  padding:0!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+.heroLogo{
+  width:280px!important;
+  max-width:55vw!important;
+  height:auto!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+  background:transparent!important;
+  padding:0!important;
+  margin:0 0 20px!important;
+  box-shadow:none!important;
+}
+.footerBrand img{
+  width:190px!important;
+  height:auto!important;
+  max-height:64px!important;
+  object-fit:contain!important;
+  background:transparent!important;
+}
+.portfolioPageHero{
+  min-height:430px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.portfolioPageHero h1{margin-top:4px}
+.filters button{
+  cursor:pointer;
+  transition:.2s ease;
+}
+.filters button:hover{
+  border-color:#111;
+}
+@media(max-width:800px){
+  .brandLogo{
+    width:154px!important;
+    height:48px!important;
+    max-width:58vw!important;
+  }
+  .heroLogo{
+    width:205px!important;
+    max-width:70vw!important;
+    margin-bottom:16px!important;
+  }
+  .portfolioGrid .project{
+    aspect-ratio:4/3!important;
+  }
+  .projectOverlay{
+    padding:54px 16px 16px;
+  }
+  .projectOverlay h3{
+    font-size:19px;
+  }
+  .modalMedia>img{
+    aspect-ratio:4/3;
+    max-height:54vh!important;
+  }
+  .portfolioPageHero{
+    min-height:360px;
+  }
+  .footerBrand img{width:150px!important}
+}
+@media(max-width:430px){
+  .brandLogo{width:145px!important;height:44px!important}
+  .heroLogo{width:190px!important;max-width:74vw!important}
+  .portfolioGrid .project{aspect-ratio:1.15/1!important}
+  .projectPlaceholder span{font-size:36px}
+}
