@@ -61,12 +61,50 @@ function update(dt){timeLeft-=dt;if(timeLeft<=0){timeLeft=0;running=false;syncHu
 B.x=Math.max(B.r+12,Math.min(W-B.r-12,B.x));B.y=Math.max(H*.52+B.r,Math.min(H-B.r-12,B.y));
 let aiTx=ball.x,aiTy=Math.max(R.r+12,Math.min(H*.48-R.r,ball.y-68));let adx=aiTx-R.x,ady=aiTy-R.y,ad=Math.hypot(adx,ady)||1;let as=speed*.78;R.vx=adx/ad*as;R.vy=ady/ad*as;R.x+=R.vx*dt;R.y+=R.vy*dt;R.x=Math.max(R.r+12,Math.min(W-R.r-12,R.x));R.y=Math.max(R.r+12,Math.min(H*.48-R.r,R.y));
 ball.x+=ball.vx*dt;ball.y+=ball.vy*dt;ball.vx*=Math.pow(.996,dt*60);ball.vy*=Math.pow(.996,dt*60);let vmax=speed*1.9,v=Math.hypot(ball.vx,ball.vy);if(v>vmax){ball.vx=ball.vx/v*vmax;ball.vy=ball.vy/v*vmax}
-const goalW=W*.48,gx1=(W-goalW)/2,gx2=gx1+goalW;if(ball.x-ball.r<20){ball.x=ball.r+20;ball.vx=Math.abs(ball.vx)}if(ball.x+ball.r>W-20){ball.x=W-ball.r-20;ball.vx=-Math.abs(ball.vx)}
-if(ball.y-ball.r<14){if(ball.x>gx1&&ball.x<gx2&&ball.y<-ball.r*.1){goal('blue')}else{ball.y=ball.r+14;ball.vy=Math.abs(ball.vy)}}if(ball.y+ball.r>H-14){if(ball.x>gx1&&ball.x<gx2&&ball.y>H+ball.r*.1){goal('red')}else{ball.y=H-ball.r-14;ball.vy=-Math.abs(ball.vy)}}
+const goalW=W*.48,gx1=(W-goalW)/2,gx2=gx1+goalW;
+const inGoalMouth=ball.x>gx1+ball.r*.25&&ball.x<gx2-ball.r*.25;
+
+// Side touchlines
+if(ball.x-ball.r<20){ball.x=ball.r+20;ball.vx=Math.abs(ball.vx)}
+if(ball.x+ball.r>W-20){ball.x=W-ball.r-20;ball.vx=-Math.abs(ball.vx)}
+
+// Real football-style goals: top = opponent goal, bottom = your goal.
+if(inGoalMouth && ball.y-ball.r<=12){goal('blue');return}
+if(inGoalMouth && ball.y+ball.r>=H-12){goal('red');return}
+
+// Goal-line rebounds only outside the posts.
+if(!inGoalMouth && ball.y-ball.r<12){ball.y=ball.r+12;ball.vy=Math.abs(ball.vy)}
+if(!inGoalMouth && ball.y+ball.r>H-12){ball.y=H-ball.r-12;ball.vy=-Math.abs(ball.vy)}
+
 collide(B,ball);collide(R,ball);
 }
 function drawCrowd(){for(let y=18;y<H-18;y+=14){ctx.fillStyle='hsl('+((y*7)%360)+' 85% 65%)';ctx.beginPath();ctx.arc(10+Math.sin(y*.1)*3,y,4,0,Math.PI*2);ctx.fill();ctx.fillStyle='hsl('+((200+y*5)%360)+' 85% 65%)';ctx.beginPath();ctx.arc(W-10+Math.cos(y*.08)*3,y,4,0,Math.PI*2);ctx.fill()}}
-function drawPitch(){ctx.fillStyle='#157a2f';ctx.fillRect(16,8,W-32,H-16);for(let i=0;i<8;i++){ctx.fillStyle=i%2?'rgba(255,255,255,.05)':'rgba(0,0,0,.05)';ctx.fillRect(16,8+i*(H-16)/8,W-32,(H-16)/8)}ctx.strokeStyle='rgba(235,255,240,.9)';ctx.lineWidth=3;ctx.strokeRect(16,8,W-32,H-16);ctx.beginPath();ctx.moveTo(16,H/2);ctx.lineTo(W-16,H/2);ctx.stroke();ctx.beginPath();ctx.arc(W/2,H/2,Math.min(W,H)*.12,0,Math.PI*2);ctx.stroke();ctx.beginPath();ctx.rect(W*.24,8,W*.52,H*.12);ctx.stroke();ctx.beginPath();ctx.rect(W*.24,H-H*.12-8,W*.52,H*.12);ctx.stroke();let gw=W*.48,gx=(W-gw)/2;ctx.lineWidth=8;ctx.strokeStyle='#ff5f84';ctx.beginPath();ctx.moveTo(gx,9);ctx.lineTo(gx,-18);ctx.lineTo(gx+gw,-18);ctx.lineTo(gx+gw,9);ctx.stroke();ctx.strokeStyle='#3bb6ff';ctx.beginPath();ctx.moveTo(gx,H-9);ctx.lineTo(gx,H+18);ctx.lineTo(gx+gw,H+18);ctx.lineTo(gx+gw,H-9);ctx.stroke();ctx.strokeStyle='rgba(255,255,255,.45)';ctx.lineWidth=1;for(let x=gx;x<=gx+gw;x+=10){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,18);ctx.stroke();ctx.beginPath();ctx.moveTo(x,H);ctx.lineTo(x,H-18);ctx.stroke()}}
+function drawPitch(){
+ctx.fillStyle='#157a2f';ctx.fillRect(16,8,W-32,H-16);
+for(let i=0;i<8;i++){ctx.fillStyle=i%2?'rgba(255,255,255,.05)':'rgba(0,0,0,.05)';ctx.fillRect(16,8+i*(H-16)/8,W-32,(H-16)/8)}
+ctx.strokeStyle='rgba(235,255,240,.9)';ctx.lineWidth=3;ctx.strokeRect(16,8,W-32,H-16);
+ctx.beginPath();ctx.moveTo(16,H/2);ctx.lineTo(W-16,H/2);ctx.stroke();
+ctx.beginPath();ctx.arc(W/2,H/2,Math.min(W,H)*.12,0,Math.PI*2);ctx.stroke();
+ctx.beginPath();ctx.rect(W*.24,8,W*.52,H*.12);ctx.stroke();
+ctx.beginPath();ctx.rect(W*.24,H-H*.12-8,W*.52,H*.12);ctx.stroke();
+
+const gw=W*.48,gx=(W-gw)/2,depth=24;
+// Top goal (opponent)
+ctx.save();ctx.fillStyle='rgba(255,255,255,.10)';ctx.fillRect(gx,8,gw,depth);
+ctx.strokeStyle='#ffffff';ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(gx,8+depth);ctx.lineTo(gx,8);ctx.lineTo(gx+gw,8);ctx.lineTo(gx+gw,8+depth);ctx.stroke();
+ctx.strokeStyle='rgba(255,255,255,.38)';ctx.lineWidth=1;
+for(let x=gx;x<=gx+gw;x+=10){ctx.beginPath();ctx.moveTo(x,8);ctx.lineTo(x,8+depth);ctx.stroke()}
+for(let y=8;y<=8+depth;y+=6){ctx.beginPath();ctx.moveTo(gx,y);ctx.lineTo(gx+gw,y);ctx.stroke()}
+ctx.restore();
+
+// Bottom goal (your goal)
+ctx.save();ctx.fillStyle='rgba(255,255,255,.10)';ctx.fillRect(gx,H-8-depth,gw,depth);
+ctx.strokeStyle='#ffffff';ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(gx,H-8-depth);ctx.lineTo(gx,H-8);ctx.lineTo(gx+gw,H-8);ctx.lineTo(gx+gw,H-8-depth);ctx.stroke();
+ctx.strokeStyle='rgba(255,255,255,.38)';ctx.lineWidth=1;
+for(let x=gx;x<=gx+gw;x+=10){ctx.beginPath();ctx.moveTo(x,H-8);ctx.lineTo(x,H-8-depth);ctx.stroke()}
+for(let y=H-8-depth;y<=H-8;y+=6){ctx.beginPath();ctx.moveTo(gx,y);ctx.lineTo(gx+gw,y);ctx.stroke()}
+ctx.restore();
+}
 function drawPlayer(p,top){
   const ring=top?'#ff557d':'#33b7ff';
   const fill=top?'#65152d':'#083f67';
