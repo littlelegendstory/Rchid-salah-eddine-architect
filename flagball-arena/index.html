@@ -20,7 +20,7 @@ button,select{font:inherit}.app{height:100%;display:grid;grid-template-rows:auto
 <div class="app">
   <div class="top"><div><div class="brand">FLAGBALL <span style="color:#ffc94a">ARENA</span></div><div class="tag">PLAY • DEFEND • SCORE • REPRESENT YOUR COUNTRY</div></div><div class="pill" id="profilePill">🇲🇦 Player_123 • 1,250</div></div>
   <main class="stage">
-    <section class="card active" id="home"><div class="panel hero"><div class="logoBall">⚽</div><h1>FLAGBALL <span>ARENA</span></h1><p class="subtitle">3 contre 3 • gazon • supporters • drapeaux • classement</p><div class="grid"><button class="btn gold" onclick="startGame()">▶ JOUER</button><button class="btn" onclick="show('countries')">🌍 PAYS</button><button class="btn" onclick="show('ranking')">🏆 CLASSEMENT</button><button class="btn red" onclick="show('events')">🔥 ÉVÉNEMENTS</button><button class="btn ghost" onclick="show('login')">👤 PROFIL</button></div><p class="help">Tu contrôles le capitaine du bas. Deux coéquipiers jouent avec toi. Chaque rondelle porte le drapeau du pays.</p></div></section>
+    <section class="card active" id="home"><div class="panel hero"><div class="logoBall">⚽</div><h1>FLAGBALL <span>ARENA</span></h1><p class="subtitle">3 contre 3 • gazon • supporters • drapeaux • classement</p><div class="grid"><button class="btn gold" onclick="startGame()">▶ JOUER</button><button class="btn" onclick="show('countries')">🌍 PAYS</button><button class="btn" onclick="show('ranking')">🏆 CLASSEMENT</button><button class="btn red" onclick="show('events')">🔥 ÉVÉNEMENTS</button><button class="btn ghost" onclick="show('login')">👤 PROFIL</button></div><p class="help">Tu contrôles le capitaine du bas. Deux coéquipiers jouent avec toi. Il y a un seul ballon; les autres ronds sont les joueurs avec le drapeau du pays.</p></div></section>
     <section class="card" id="countries"><div class="panel"><h2>Choisis ton pays</h2><div class="countries" id="countryList"></div><div style="height:12px"></div><button class="btn gold" style="width:100%" onclick="show('home')">CONFIRMER</button></div></section>
     <section class="card" id="ranking"><div class="panel"><h2>Classement mondial</h2><div id="rankingList"></div><div style="height:12px"></div><button class="btn" style="width:100%" onclick="show('home')">Retour</button></div></section>
     <section class="card" id="events"><div class="panel"><h2>Événements internationaux</h2><div class="rankRow"><div>🏆</div><div><b>World Nations Event</b><div class="small">Gagne pour ton pays</div></div><b>LIVE</b></div><div class="rankRow"><div>🌍</div><div><b>Africa Challenge</b><div class="small">Série spéciale Afrique</div></div><span>+XP</span></div><div class="rankRow"><div>⚽</div><div><b>Weekend Goal Rush</b><div class="small">Buts doublés au classement</div></div><span>48h</span></div><div style="height:12px"></div><button class="btn" style="width:100%" onclick="show('home')">Retour</button></div></section>
@@ -70,8 +70,31 @@ collide(B,ball);collide(R,ball);
 }
 function drawCrowd(){for(let y=18;y<H-18;y+=14){ctx.fillStyle='hsl('+((y*7)%360)+' 85% 65%)';ctx.beginPath();ctx.arc(10+Math.sin(y*.1)*3,y,4,0,Math.PI*2);ctx.fill();ctx.fillStyle='hsl('+((200+y*5)%360)+' 85% 65%)';ctx.beginPath();ctx.arc(W-10+Math.cos(y*.08)*3,y,4,0,Math.PI*2);ctx.fill()}}
 function drawPitch(){ctx.fillStyle='#157a2f';ctx.fillRect(16,8,W-32,H-16);for(let i=0;i<8;i++){ctx.fillStyle=i%2?'rgba(255,255,255,.05)':'rgba(0,0,0,.05)';ctx.fillRect(16,8+i*(H-16)/8,W-32,(H-16)/8)}ctx.strokeStyle='rgba(235,255,240,.9)';ctx.lineWidth=3;ctx.strokeRect(16,8,W-32,H-16);ctx.beginPath();ctx.moveTo(16,H/2);ctx.lineTo(W-16,H/2);ctx.stroke();ctx.beginPath();ctx.arc(W/2,H/2,Math.min(W,H)*.12,0,Math.PI*2);ctx.stroke();ctx.beginPath();ctx.rect(W*.24,8,W*.52,H*.12);ctx.stroke();ctx.beginPath();ctx.rect(W*.24,H-H*.12-8,W*.52,H*.12);ctx.stroke();let gw=W*.48,gx=(W-gw)/2;ctx.lineWidth=8;ctx.strokeStyle='#ff5f84';ctx.beginPath();ctx.moveTo(gx,9);ctx.lineTo(gx,-18);ctx.lineTo(gx+gw,-18);ctx.lineTo(gx+gw,9);ctx.stroke();ctx.strokeStyle='#3bb6ff';ctx.beginPath();ctx.moveTo(gx,H-9);ctx.lineTo(gx,H+18);ctx.lineTo(gx+gw,H+18);ctx.lineTo(gx+gw,H-9);ctx.stroke();ctx.strokeStyle='rgba(255,255,255,.45)';ctx.lineWidth=1;for(let x=gx;x<=gx+gw;x+=10){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,18);ctx.stroke();ctx.beginPath();ctx.moveTo(x,H);ctx.lineTo(x,H-18);ctx.stroke()}}
-function drawPlayer(p,top){let c1=top?'#ff5a80':'#33b7ff',c2=top?'#a50036':'#005ea5';let rg=ctx.createRadialGradient(p.x-p.r*.3,p.y-p.r*.35,2,p.x,p.y,p.r);rg.addColorStop(0,'#fff');rg.addColorStop(.18,c1);rg.addColorStop(1,c2);ctx.shadowBlur=20;ctx.shadowColor=c1;ctx.fillStyle=rg;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;ctx.font=(p.r*.95)+'px Apple Color Emoji, Segoe UI Emoji, sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(top?'🇫🇷':currentCountry()[2],p.x,p.y+1)}
-function draw(){ctx.clearRect(0,0,W,H);ctx.fillStyle='#10251a';ctx.fillRect(0,0,W,H);drawCrowd();drawPitch();drawPlayer(state.red,true);state.redMates.forEach(p=>drawPlayer(p,true));state.blueMates.forEach(p=>drawPlayer(p,false));drawPlayer(state.blue,false);ctx.font=(state.ball.r*1.7)+'px serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('⚽',state.ball.x,state.ball.y+1)}
+function drawPlayer(p,top){
+  const ring=top?'#ff557d':'#33b7ff';
+  const fill=top?'#65152d':'#083f67';
+  ctx.save();
+  ctx.shadowBlur=14;
+  ctx.shadowColor=ring;
+  ctx.fillStyle=fill;
+  ctx.strokeStyle=ring;
+  ctx.lineWidth=4;
+  ctx.beginPath();
+  ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+  ctx.fill();
+  ctx.stroke();
+  ctx.shadowBlur=0;
+  ctx.fillStyle='rgba(255,255,255,.10)';
+  ctx.beginPath();
+  ctx.arc(p.x-p.r*.18,p.y-p.r*.22,p.r*.52,0,Math.PI*2);
+  ctx.fill();
+  ctx.font=(p.r*.88)+'px Apple Color Emoji, Segoe UI Emoji, sans-serif';
+  ctx.textAlign='center';
+  ctx.textBaseline='middle';
+  ctx.fillText(top?'🇫🇷':currentCountry()[2],p.x,p.y+1);
+  ctx.restore();
+}
+function draw(){ctx.clearRect(0,0,W,H);ctx.fillStyle='#10251a';ctx.fillRect(0,0,W,H);drawCrowd();drawPitch();drawPlayer(state.red,true);state.redMates.forEach(p=>drawPlayer(p,true));state.blueMates.forEach(p=>drawPlayer(p,false));drawPlayer(state.blue,false);ctx.save();ctx.shadowBlur=10;ctx.shadowColor='#fff';ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(state.ball.x,state.ball.y,state.ball.r,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;ctx.fillStyle='#111';ctx.beginPath();ctx.arc(state.ball.x,state.ball.y,state.ball.r*.28,0,Math.PI*2);ctx.fill();for(let i=0;i<5;i++){let a=i*Math.PI*2/5-Math.PI/2;ctx.beginPath();ctx.arc(state.ball.x+Math.cos(a)*state.ball.r*.52,state.ball.y+Math.sin(a)*state.ball.r*.52,state.ball.r*.13,0,Math.PI*2);ctx.fill()}ctx.restore()}
 function roundRect(x,y,w,h,r){ctx.beginPath();ctx.roundRect(x,y,w,h,r)}function disc(p,c1,c2){let rg=ctx.createRadialGradient(p.x-p.r*.3,p.y-p.r*.4,2,p.x,p.y,p.r);rg.addColorStop(0,'#fff');rg.addColorStop(.15,c1);rg.addColorStop(1,c2);ctx.shadowBlur=24;ctx.shadowColor=c1;ctx.fillStyle=rg;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0}
 function loop(t){if(!running)return;let dt=Math.min(.03,(t-last)/1000||.016);last=t;update(dt);draw();raf=requestAnimationFrame(loop)}
 function finish(){draw();let win=blueScore>redScore,drawn=blueScore===redScore;let pts=+localStorage.getItem('flagballPts')||1250;if(win)pts+=120;else if(drawn)pts+=30;else pts=Math.max(0,pts-25);localStorage.setItem('flagballPts',pts);updateProfile();document.getElementById('resultTitle').textContent=drawn?'ÉGALITÉ':win?'VICTOIRE!':'DÉFAITE';document.getElementById('resultScore').textContent=`${currentCountry()[2]} ${blueScore} — ${redScore} 🇫🇷  •  ${win?'+120':drawn?'+30':'-25'} pts`;document.getElementById('result').classList.add('show')}
