@@ -847,3 +847,204 @@ html[dir="rtl"] .langSwitch{border-left:0;border-right:1px solid rgba(255,255,25
   .bookCoverImage{max-width:100%}
   .contactCard{overflow-wrap:anywhere}
 }
+
+
+/* === RESPONSIVE SYSTEM FINAL: PHONE / TABLET / LAPTOP / DESKTOP === */
+
+/* Large desktop / presentation screens */
+@media (min-width: 1440px){
+  .section{padding-left:clamp(90px,7vw,150px)!important;padding-right:clamp(90px,7vw,150px)!important}
+  .heroContent{max-width:1180px!important}
+  .hero h1{font-size:clamp(72px,6.3vw,112px)!important}
+  .twoCols,.architectGrid,.portfolioTeaserGrid,.bookFeatureGrid,.portfolioIntro{gap:clamp(72px,7vw,140px)!important}
+  .serviceGrid,.processGrid{gap:28px!important}
+  .staticPortfolioGrid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:28px!important}
+  .portfolioPageHero{padding-left:clamp(100px,8vw,170px)!important;padding-right:clamp(100px,8vw,170px)!important}
+  .bookHero{grid-template-columns:minmax(380px,.85fr) minmax(0,1.15fr)!important}
+  .bookCoverLargeImage{width:min(500px,36vw)!important}
+}
+
+/* Standard desktop / laptop */
+@media (min-width: 1024px) and (max-width: 1439px){
+  .section{padding-left:clamp(58px,6vw,96px)!important;padding-right:clamp(58px,6vw,96px)!important}
+  .heroContent{max-width:980px!important}
+  .hero h1{font-size:clamp(58px,7vw,92px)!important}
+  .topbar nav{gap:18px!important}
+  .staticPortfolioGrid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:22px!important}
+  .bookCoverLargeImage{width:min(420px,38vw)!important}
+}
+
+/* Tablet landscape + small laptop */
+@media (min-width: 768px) and (max-width: 1023px){
+  .topbar{
+    height:78px!important;
+    min-height:78px!important;
+    padding:10px 20px!important;
+  }
+  .headerLogoMark{width:52px!important;height:40px!important}
+  .headerBrandText strong{font-size:11px!important;letter-spacing:1.4px!important}
+  .headerBrandText small{font-size:6.5px!important;letter-spacing:3px!important}
+
+  .topbar nav{
+    position:fixed!important;
+    top:78px!important;
+    right:18px!important;
+    left:auto!important;
+    width:min(360px,calc(100vw - 36px))!important;
+    padding:22px!important;
+    background:#0d0d0d!important;
+    border:1px solid rgba(255,255,255,.08)!important;
+    box-shadow:0 26px 70px rgba(0,0,0,.35)!important;
+    display:none!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:4px!important;
+    z-index:1000!important;
+  }
+  body.menuOpen .topbar nav{display:flex!important}
+  .topbar nav a{padding:12px 0!important;font-size:13px!important}
+  .menuBtn{display:block!important;font-size:28px!important}
+
+  .section{padding:72px 42px!important}
+  .hero{min-height:76vh!important}
+  .heroContent{max-width:720px!important}
+  .hero h1{font-size:clamp(48px,8vw,72px)!important}
+  .hero p{max-width:620px!important;font-size:18px!important}
+
+  .twoCols,.architectGrid,.portfolioTeaserGrid,.bookFeatureGrid,.portfolioIntro{
+    grid-template-columns:1fr 1fr!important;
+    gap:42px!important;
+  }
+
+  .serviceGrid,.processGrid{grid-template-columns:repeat(2,1fr)!important}
+  .staticPortfolioGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:22px!important}
+  .manifestoGrid{grid-template-columns:repeat(3,1fr)!important}
+  .bookHero{grid-template-columns:.9fr 1.1fr!important;padding:60px 42px!important}
+  .bookHeroCopy h1{font-size:clamp(48px,6vw,68px)!important}
+  .bookCoverLargeImage{width:min(330px,38vw)!important}
+  .contactCard{padding:28px!important}
+}
+
+/* Phones + portrait tablets */
+@media (max-width: 767px){
+  html,body{overflow-x:hidden!important}
+  .topbar{
+    height:72px!important;
+    min-height:72px!important;
+    padding:8px 14px!important;
+  }
+  .headerBrand{gap:8px!important;max-width:calc(100vw - 70px)!important}
+  .headerLogoMark{width:44px!important;height:36px!important}
+  .headerBrandText strong{font-size:9.5px!important;letter-spacing:1.1px!important}
+  .headerBrandText small{font-size:6px!important;letter-spacing:2.6px!important;margin-top:4px!important}
+  .menuBtn{display:block!important;font-size:27px!important}
+
+  .topbar nav{
+    position:fixed!important;
+    top:72px!important;
+    inset-inline:0!important;
+    width:100%!important;
+    max-height:calc(100dvh - 72px)!important;
+    overflow-y:auto!important;
+    padding:18px 20px 28px!important;
+    background:#0b0b0b!important;
+    border-top:1px solid rgba(255,255,255,.08)!important;
+    display:none!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:2px!important;
+    z-index:1000!important;
+  }
+  body.menuOpen .topbar nav{display:flex!important}
+  .topbar nav a{padding:13px 0!important;font-size:14px!important;border-bottom:1px solid rgba(255,255,255,.06)!important}
+  .langSwitch{margin-top:12px!important;padding-top:8px!important}
+
+  .hero{
+    min-height:calc(100svh - 72px)!important;
+    padding:92px 22px 56px!important;
+    align-items:flex-end!important;
+  }
+  .heroOverlay{background:linear-gradient(180deg,rgba(5,5,5,.36) 0%,rgba(5,5,5,.58) 42%,rgba(5,5,5,.96) 100%)!important}
+  .heroContent{max-width:100%!important}
+  .hero h1{font-size:clamp(42px,13vw,64px)!important;line-height:.98!important;letter-spacing:-1.6px!important}
+  .hero p{font-size:16px!important;line-height:1.6!important;max-width:95%!important}
+  .heroActions{display:flex!important;flex-direction:column!important;gap:10px!important}
+  .heroActions .btn{width:100%!important;text-align:center!important}
+
+  .section{padding:58px 22px!important}
+  .sectionLabel{font-size:10px!important;letter-spacing:3px!important;margin-bottom:34px!important}
+  .section h2{font-size:clamp(36px,10vw,52px)!important;line-height:1.02!important}
+
+  .twoCols,.architectGrid,.portfolioTeaserGrid,.bookFeatureGrid,.portfolioIntro,.bookHero{
+    grid-template-columns:1fr!important;
+    gap:30px!important;
+  }
+  .architectLogoPanel{min-height:260px!important}
+  .architectLogoPanel img{max-width:70%!important}
+
+  .agencyValues,.serviceGrid,.processGrid,.manifestoGrid{
+    grid-template-columns:1fr!important;
+    gap:14px!important;
+  }
+
+  .staticPortfolioControls{
+    display:flex!important;
+    overflow-x:auto!important;
+    gap:8px!important;
+    padding-bottom:8px!important;
+    scroll-snap-type:x proximity;
+    -webkit-overflow-scrolling:touch;
+  }
+  .staticFilter{flex:0 0 auto!important;scroll-snap-align:start}
+  .staticPortfolioGrid{grid-template-columns:1fr!important;gap:18px!important}
+  .staticProjectMedia img{aspect-ratio:4/3!important;object-fit:cover!important}
+  .staticProjectBody{padding:18px!important}
+
+  .portfolioPageMain{padding-top:72px!important}
+  .portfolioPageHero{padding:58px 22px!important}
+  .portfolioPageHero h1{font-size:clamp(48px,14vw,72px)!important}
+  .portfolioIntro{gap:20px!important}
+
+  .bookFeatureGrid{gap:28px!important}
+  .bookVisual{max-width:360px!important;width:100%!important;margin:0 auto!important}
+  .bookCoverImage{width:100%!important}
+  .bookFeatureCopy h2{font-size:clamp(36px,10vw,52px)!important}
+  .bookMeta{grid-template-columns:1fr!important}
+  .bookActions{flex-direction:column!important}
+  .bookActions .btn{width:100%!important;text-align:center!important}
+
+  .bookPageMain{padding-top:72px!important}
+  .bookHero{min-height:auto!important;padding:44px 22px 58px!important}
+  .bookHeroVisual{order:1!important}
+  .bookHeroCopy{order:2!important}
+  .bookHeroCopy h1{font-size:clamp(42px,12vw,62px)!important}
+  .bookLead{font-size:18px!important}
+  .bookCoverLargeImage{width:min(330px,88vw)!important}
+  .bookFinalCta{padding:72px 22px!important}
+
+  .contactCard{padding:22px!important}
+  .contactCard>div{padding:14px 0!important}
+  .qrBlock img{width:150px!important;height:150px!important}
+  .floatingWhatsApp{right:14px!important;bottom:14px!important;padding:12px 16px!important;font-size:13px!important}
+
+  .modalCard{width:calc(100vw - 20px)!important;max-height:92dvh!important;overflow-y:auto!important}
+  .modalMedia img{max-height:46dvh!important}
+  .modalContent{padding:18px!important}
+}
+
+/* Very small phones */
+@media (max-width: 390px){
+  .headerBrandText strong{font-size:8.8px!important;letter-spacing:.9px!important}
+  .headerBrandText small{font-size:5.5px!important;letter-spacing:2.2px!important}
+  .hero{padding-left:18px!important;padding-right:18px!important}
+  .section{padding-left:18px!important;padding-right:18px!important}
+  .portfolioPageHero{padding-left:18px!important;padding-right:18px!important}
+  .bookHero{padding-left:18px!important;padding-right:18px!important}
+}
+
+/* Wide ultra screens */
+@media (min-width: 1800px){
+  .heroContent{max-width:1380px!important}
+  .section{max-width:1800px!important;margin-inline:auto!important}
+  .topbar{padding-inline:clamp(40px,5vw,110px)!important}
+}
