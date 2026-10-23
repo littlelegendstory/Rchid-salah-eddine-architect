@@ -1425,3 +1425,6 @@ html[dir="rtl"] .missionStep{direction:rtl}
 .bookTrilogy .trilogy{margin-top:0}
 @media (max-width:900px){.bookHeroCopy h2.bookVolTitle{font-size:clamp(40px,11vw,60px)}}
 @media (min-width:901px) and (max-width:1100px){.bookHeroCopy h2.bookVolTitle{font-size:clamp(48px,6vw,68px)}}
+.keyFacts{grid-template-columns:repeat(3,1fr)!important}
+.keyFacts>div:nth-child(3){border-right:0!important}
+@media (max-width:900px){.keyFacts{grid-template-columns:1fr!important}.keyFacts>div{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.08)}.keyFacts>div:last-child{border-bottom:0}}
