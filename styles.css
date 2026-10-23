@@ -1093,3 +1093,71 @@ html[dir="rtl"] .langSwitch{border-left:0;border-right:1px solid rgba(255,255,25
 .galleryCounter{position:absolute;right:12px;bottom:12px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;letter-spacing:1px;padding:4px 10px;border-radius:20px;pointer-events:none}
 .galleryCounter:empty{display:none}
 #modalThumbs{overflow-x:auto;scroll-snap-type:x mandatory}
+
+/* ================= 2026-10 PROFESSIONAL PASS ================= */
+/* Hero with real project photography */
+.hero.heroPhoto{background:#0d0d0d!important;overflow:hidden}
+.hero.heroPhoto:before,.hero.heroPhoto:after{display:none!important}
+.heroImage{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transform:scale(1.02);animation:heroZoom 18s ease-out forwards}
+@keyframes heroZoom{to{transform:scale(1.08)}}
+.hero.heroPhoto .heroOverlay{z-index:1;background:linear-gradient(90deg,rgba(8,8,8,.82) 0%,rgba(8,8,8,.55) 42%,rgba(8,8,8,.12) 75%),linear-gradient(to top,rgba(8,8,8,.7),transparent 45%)!important}
+.hero.heroPhoto .heroContent{z-index:2}
+.heroCaption{position:absolute;z-index:2;right:max(4vw,20px);bottom:28px;color:rgba(255,255,255,.75);font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:4px}
+.heroCaption:hover{color:#fff;border-color:#d9c39e}
+@media (prefers-reduced-motion:reduce){.heroImage{animation:none}}
+
+/* Key facts */
+.keyFacts{display:grid;grid-template-columns:repeat(4,1fr);background:#111;color:#f4f0e8;border-top:1px solid rgba(255,255,255,.08)}
+.keyFacts>div{padding:38px max(3vw,20px);border-right:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:10px}
+.keyFacts>div:last-child{border-right:0}
+.keyFacts strong{font-size:clamp(30px,3.2vw,46px);font-weight:300;letter-spacing:-1px;color:#d9c39e;line-height:1}
+.keyFacts span{font-size:13px;line-height:1.55;color:#bdb8ae;max-width:240px}
+
+/* Selected projects */
+.featuredProjects{background:#f4f2ee}
+.featuredHead{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:40px}
+.featuredHead h2{margin:0}
+.textLink{color:#111;text-decoration:none;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;border-bottom:1px solid #b89f72;padding-bottom:5px;white-space:nowrap}
+.textLink:hover{color:#8b7650}
+.featuredGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.featuredCard{display:block;text-decoration:none;color:#111;background:#fff}
+.featuredLarge{grid-column:span 2;grid-row:span 2}
+.featuredMedia{overflow:hidden;aspect-ratio:4/3;background:#1a1a1a}
+.featuredLarge .featuredMedia{aspect-ratio:auto;height:calc(100% - 96px);min-height:360px}
+.featuredMedia img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.featuredCard:hover .featuredMedia img{transform:scale(1.05)}
+.featuredMeta{padding:18px 20px 22px;min-height:96px;box-sizing:border-box}
+.featuredCat{font-size:10px;letter-spacing:2.4px;text-transform:uppercase;color:#8b7650}
+.featuredMeta h3{font-size:17px;font-weight:500;margin:8px 0 4px;letter-spacing:.2px}
+.featuredMeta p{margin:0;font-size:13px;color:#777}
+
+/* Contact */
+.contactMap{display:block;margin-top:16px;text-align:center;font-size:13px;letter-spacing:1px;color:#8b7650!important;text-decoration:none}
+.contactMap:hover{text-decoration:underline}
+.qrBlock{display:none!important}
+
+/* Portfolio: hide leftover dynamic filter bar */
+.portfolioFilterHead #filters{display:none!important}
+
+@media (max-width:900px){
+  .keyFacts{grid-template-columns:1fr 1fr}
+  .keyFacts>div:nth-child(2){border-right:0}
+  .keyFacts>div:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.08)}
+  .featuredGrid{grid-template-columns:1fr 1fr}
+  .featuredLarge{grid-column:span 2;grid-row:auto}
+  .featuredLarge .featuredMedia{height:auto;min-height:0;aspect-ratio:16/10}
+  .hero.heroPhoto .heroOverlay{background:linear-gradient(to top,rgba(8,8,8,.88) 0%,rgba(8,8,8,.55) 55%,rgba(8,8,8,.25) 100%)!important}
+  .heroCaption{left:20px;right:auto;bottom:16px;font-size:9.5px}
+}
+@media (max-width:560px){
+  .keyFacts>div{padding:26px 18px}
+  .featuredGrid{grid-template-columns:1fr}
+  .featuredLarge{grid-column:auto}
+  .featuredHead{flex-direction:column;align-items:flex-start}
+}
+html[dir="rtl"] .hero.heroPhoto .heroOverlay{background:linear-gradient(270deg,rgba(8,8,8,.82) 0%,rgba(8,8,8,.55) 42%,rgba(8,8,8,.12) 75%),linear-gradient(to top,rgba(8,8,8,.7),transparent 45%)!important}
+/* Consistent typography on service pages (same voice as homepage) */
+.offerHero h1,.v3Hero h1{font-weight:300!important;letter-spacing:-.035em!important}
+.offerSection h2,.offerCTA h2,.v3Section h2,.v3CTA h2{font-weight:300!important;letter-spacing:-.025em!important}
+.offerCard h3,.offerStep h3,.v3Card h3,.v3Step h3{font-weight:500!important}
+.offerBtn,.v3Btn{font-weight:500!important;letter-spacing:.5px}
