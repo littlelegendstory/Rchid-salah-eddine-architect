@@ -1416,3 +1416,12 @@ html[dir="rtl"] .missionStep{direction:rtl}
 .architectPortrait span{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8b7650}
 @media (max-width:900px){.architectPortrait{position:static}.architectPortrait img,.architectPortrait figcaption{max-width:none}}
 .architectPortrait img{height:auto!important}
+/* Book volumes II & III share Part I layout */
+.bookHeroCopy h2.bookVolTitle{font:400 clamp(46px,6vw,92px)/.95 Georgia,serif;letter-spacing:-2px;margin:14px 0 26px;color:#fff}
+.bookHeroVol{border-top:1px solid rgba(255,255,255,.08)}
+.bookHero .bookCoverLargeImage{height:auto!important}
+.bookStoryClose{font-style:italic;color:#5c5346!important}
+.bookTrilogy{background:#f5f1e9;padding-top:10px!important}
+.bookTrilogy .trilogy{margin-top:0}
+@media (max-width:900px){.bookHeroCopy h2.bookVolTitle{font-size:clamp(40px,11vw,60px)}}
+@media (min-width:901px) and (max-width:1100px){.bookHeroCopy h2.bookVolTitle{font-size:clamp(48px,6vw,68px)}}
