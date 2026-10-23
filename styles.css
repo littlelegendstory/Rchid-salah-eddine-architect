@@ -1365,3 +1365,12 @@ html[dir="rtl"] .book2Quote{border-left:0;border-right:2px solid #b89f72;padding
 .book2Meta>div{padding:12px 12px 0 0}
 .book2Meta dt{font-size:10px;letter-spacing:2.2px;text-transform:uppercase;color:#8b7650;margin-bottom:4px}
 .book2Meta dd{margin:0;font-size:16px;color:#111}
+.book3{background:#efe9de}
+.book3 .book2Grid{grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr)}
+.book3 .book2Visual{order:2}.book3 .book2Copy{order:1}
+.book3 .book2CoverImg{transform:perspective(1200px) rotateY(6deg)}
+.book3 .book2Quote{font-size:clamp(20px,2vw,27px)}
+.trilogy li a{display:flex;flex-direction:column;gap:6px;color:inherit;text-decoration:none}
+.trilogy li.done strong{color:#111}
+.trilogy li:hover{border-color:#b89f72}
+@media (max-width:900px){.book3 .book2Grid{grid-template-columns:1fr}.book3 .book2Visual{order:0}}
