@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=20261023-logo">
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/icon-512.png?v=20261023-logo">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20261023-logo">
-  <link rel="stylesheet" href="styles.css?v=20261023-cred">
+  <link rel="stylesheet" href="styles.css?v=20261023-draft2">
   <link rel="canonical" href="https://www.rsearchitecte.art/portfolio.html">
   <meta property="og:title" content="Portfolio — RCHID SALAH EDDINE Architecte">
   <meta property="og:description" content="Architecture contemporaine, villas, hôtels, commerces, industrie et aménagement au Maroc.">
@@ -40,34 +40,22 @@
   </nav>
 </header>
 <main class="portfolioPageMain">
-<section class="portfolioPageHero">
+<section class="portfolioPageHero pfHero">
   <div class="sectionLabel" data-i18n="portfolioHeroLabel">RCHID SALAH EDDINE — ARCHITECTE</div>
   <h1 data-i18n="portfolioHeroTitle">Portfolio</h1>
-  <p data-i18n="portfolioHeroText">Découvrez l’ensemble des projets de l’agence, classés par typologie.</p>
-  <a class="portfolioBack" href="/" data-i18n="portfolioBack">← Retour à l’accueil</a>
+  <p data-i18n="portfolioPageP1">Un portfolio transversal réunissant villas et logements, hôtels et complexes touristiques, commerces et showrooms, équipements, industrie, aménagement intérieur et projets urbains.</p>
+  <div class="pfStats">
+    <div><strong>24</strong><span data-i18n="factProjects">projets au portfolio</span></div>
+    <div><strong>9</strong><span data-i18n="pfTypes">typologies</span></div>
+    <div><strong>12</strong><span data-i18n="factCities">villes et communes au Maroc</span></div>
+  </div>
 </section>
-<section id="portfolio" class="section portfolioSection">
-  <div class="sectionLabel" data-i18n="portfolioFullLabel">PORTFOLIO COMPLET</div>
-  <div class="portfolioIntro">
-    <div>
-      <h2 data-i18n="ourProjects">Nos projets</h2>
-    </div>
-    <div>
-      <p data-i18n="portfolioPageP1">Un portfolio transversal réunissant villas et logements, hôtels et complexes touristiques, commerces et showrooms, équipements, industrie, aménagement intérieur et projets urbains.</p>
-      <p data-i18n="portfolioPageP2">Chaque projet illustre une recherche différente autour du site, du programme, de la matière, de la lumière et de l’identité architecturale.</p>
-    </div>
-  </div>
-  <div class="portfolioHead portfolioFilterHead">
-    <h3 data-i18n="exploreProjects">Explorer les projets</h3>
-    <div id="filters" class="filters">
-      <button class="active" data-filter="Tous">Tous</button>
-    </div>
-  </div>
-
-  <div class="staticPortfolioControls">
-  <button class="staticFilter active" data-cat="Tous" data-cat-label="Tous">Tous</button>
-  <button class="staticFilter" data-cat="Villa" data-cat-label="Villa">Villa</button><button class="staticFilter" data-cat="Immeuble" data-cat-label="Immeuble">Immeuble</button><button class="staticFilter" data-cat="Commerce" data-cat-label="Commerce">Commerce</button><button class="staticFilter" data-cat="Hôtel" data-cat-label="Hôtel">Hôtel</button><button class="staticFilter" data-cat="Complexe touristique" data-cat-label="Complexe touristique">Complexe touristique</button><button class="staticFilter" data-cat="Équipement" data-cat-label="Équipement">Équipement</button><button class="staticFilter" data-cat="Station de services" data-cat-label="Station de services">Station de services</button><button class="staticFilter" data-cat="Industrie" data-cat-label="Industrie">Industrie</button><button class="staticFilter" data-cat="Urbanisme" data-cat-label="Urbanisme">Lotissements & Urbanisme</button>
+<section id="portfolio" class="section portfolioSection pfSection">
+  <div class="staticPortfolioControls pfFilters" role="tablist" aria-label="Filtrer par typologie">
+  <button class="staticFilter active" data-cat="Tous" data-cat-label="Tous"><span class="fl">Tous</span><sup class="fc"></sup></button>
+  <button class="staticFilter" data-cat="Villa" data-cat-label="Villa"><span class="fl">Villa</span><sup class="fc"></sup></button><button class="staticFilter" data-cat="Immeuble" data-cat-label="Immeuble"><span class="fl">Immeuble</span><sup class="fc"></sup></button><button class="staticFilter" data-cat="Commerce" data-cat-label="Commerce"><span class="fl">Commerce</span><sup class="fc"></sup></button><button class="staticFilter" data-cat="Hôtel" data-cat-label="Hôtel"><span class="fl">Hôtel</span><sup class="fc"></sup></button><button class="staticFilter" data-cat="Complexe touristique" data-cat-label="Complexe touristique"><span class="fl">Complexe touristique</span><sup class="fc"></sup></button><button class="staticFilter" data-cat="Équipement" data-cat-label="Équipement"><span class="fl">Équipement</span><sup class="fc"></sup></button><button class="staticFilter" data-cat="Station de services" data-cat-label="Station de services"><span class="fl">Station de services</span><sup class="fc"></sup></button><button class="staticFilter" data-cat="Industrie" data-cat-label="Industrie"><span class="fl">Industrie</span><sup class="fc"></sup></button><button class="staticFilter" data-cat="Urbanisme" data-cat-label="Urbanisme"><span class="fl">Lotissements & Urbanisme</span><sup class="fc"></sup></button>
 </div>
+<p class="pfCount" aria-live="polite"></p>
 <div id="staticPortfolioGrid" class="staticPortfolioGrid">
 
 <article class="staticProjectCard" data-category="Villa">
@@ -80,6 +68,7 @@
     <h3>VILLA CONTEMPORAINE HALLALA</h3>
     <p class="staticProjectCity">Kénitra, Maroc</p>
     <p>Volumétrie épurée, continuité intérieur-extérieur et matérialité naturelle.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -93,6 +82,7 @@
     <h3>VILLA HIKMA</h3>
     <p class="staticProjectCity">Meknès, Maroc</p>
     <p>Élégance méditerranéenne, lumière, jardin et intimité.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -106,6 +96,7 @@
     <h3>VILLA RIAD ALMANZAH</h3>
     <p class="staticProjectCity">Meknès, Maroc</p>
     <p>Expressivité géométrique, chaleur des bois, terrasses et loisirs.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -119,6 +110,7 @@
     <h3>VILLA ABRAJ</h3>
     <p class="staticProjectCity">Meknès, Maroc</p>
     <p>Axe d’entrée, cadres architecturaux et mise en scène nocturne.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -132,6 +124,7 @@
     <h3>VILLA CONTEMPORAINE</h3>
     <p class="staticProjectCity">Meknès, Maroc</p>
     <p>Minimalisme chaleureux, matière, lumière et paysage.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -145,6 +138,7 @@
     <h3>IMMEUBLE RÉSIDENTIEL JNANE KAMILIA</h3>
     <p class="staticProjectCity">Meknès, Maroc</p>
     <p>Trame, relief sculptural et identité urbaine.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -158,6 +152,7 @@
     <h3>220 LOGEMENTS</h3>
     <p class="staticProjectCity">Meknès, Maroc</p>
     <p>Macro-lot, lisibilité des circulations et qualité de vie.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -171,6 +166,7 @@
     <h3>IMMEUBLE REDHA — HAMRYA</h3>
     <p class="staticProjectCity">Meknès, Maroc</p>
     <p>Dynamisme d’angle, usage mixte et socle actif.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -184,6 +180,7 @@
     <h3>PLATEAUX BUREAUX KÉNITRA</h3>
     <p class="staticProjectCity">Kénitra Centre, Maroc</p>
     <p>Façade vitrée, signal urbain et flexibilité des plateaux.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -197,6 +194,7 @@
     <h3>CENTRE COMMERCIAL ATTAYSSIR</h3>
     <p class="staticProjectCity">Maroc</p>
     <p>Façade linéaire, transparence et éclairage signature.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -210,6 +208,7 @@
     <h3>APART HÔTEL NADOR</h3>
     <p class="staticProjectCity">Nador, Maroc — terrain 120 m²</p>
     <p>Compacité, hospitalité urbaine et rythme des balcons.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -223,6 +222,7 @@
     <h3>HÔTEL RELAXE TARFAYA</h3>
     <p class="staticProjectCity">Commune de Tarfaya, Maroc</p>
     <p>Hospitalité contemporaine, vue mer et ambiance balnéaire.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -236,6 +236,7 @@
     <h3>COMPLEXE TOURISTIQUE AÏN TOTO</h3>
     <p class="staticProjectCity">Région Fès-Meknès, Maroc</p>
     <p>Paysage, loisirs et mixité des usages.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -249,6 +250,7 @@
     <h3>CENTRE DE JOUR SOCIO-ÉDUCATIF</h3>
     <p class="staticProjectCity">Projet au profit des enfants autistes</p>
     <p>Inclusion, confort naturel et cadre sécurisé.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -262,6 +264,7 @@
     <h3>SIÈGE DE SCOLARITÉ - FST MOHAMMEDIA</h3>
     <p class="staticProjectCity">Mohammedia, Maroc</p>
     <p>Lisibilité, administration et protection solaire.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -275,6 +278,7 @@
     <h3>STATION DES SERVICES - AÏT MOUSSA OU ALI</h3>
     <p class="staticProjectCity">Boumia, Province de Midelt</p>
     <p>Flux, programme mixte et équipement routier.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -288,6 +292,7 @@
     <h3>STATION DE SERVICES &amp; COMPLEXE DE LOISIRS</h3>
     <p class="staticProjectCity">Aït Ayach - Midelt</p>
     <p>Aire de services, loisirs et composition paysagère.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -301,6 +306,7 @@
     <h3>UNITÉ DE STOCKAGE &amp; FROID INDUSTRIEL</h3>
     <p class="staticProjectCity">Maroc</p>
     <p>Logistique, froid et hiérarchie des flux.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -314,6 +320,7 @@
     <h3>USINE DE SÉCHAGE DE FIENTE</h3>
     <p class="staticProjectCity">El Hajeb, Maroc</p>
     <p>Process industriel, circulation lourde et efficacité opérationnelle.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -327,6 +334,7 @@
     <h3>POULAILLER DE POULES REPRODUCTRICES</h3>
     <p class="staticProjectCity">El Hajeb, Maroc</p>
     <p>Biosécurité, trame répétitive et flux maîtrisés.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -340,6 +348,7 @@
     <h3>USINE DE COUVOIR DE POULES</h3>
     <p class="staticProjectCity">Taoujdate, Maroc</p>
     <p>Process sanitaire, séparation des flux et architecture fonctionnelle.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -354,6 +363,7 @@
     <h3>LOTISSEMENT ZAÏD</h3>
     <p class="staticProjectCity">Errachidia, Région Drâa-Tafilalet, Maroc</p>
     <p>Plan directeur d’un lotissement d’activité structuré autour de 7 lots, d’accès lisibles, de stationnements et d’un traitement paysager intégré.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -367,6 +377,7 @@
     <h3>LOTISSEMENT OUISLANE</h3>
     <p class="staticProjectCity">Ouislane, Meknès, Maroc</p>
     <p>Lotissement résidentiel intégrant 38 lots, équipement de loisir, espaces verts et voiries hiérarchisées dans une composition urbaine lisible.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 
@@ -380,6 +391,7 @@
     <h3>PLAN DIRECTEUR DU LOTISSEMENT TAWENZQ</h3>
     <p class="staticProjectCity">Midelt, Région Drâa-Tafilalet, Maroc</p>
     <p>Plan directeur d’un lotissement mixte réunissant logements, commerces, équipements de proximité, espaces verts et voiries organisées par secteurs.</p>
+    <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
 </div>
@@ -390,7 +402,7 @@
 <a class="floatingWhatsApp" href="https://wa.me/212664171210" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">WhatsApp</a>
 <footer>
   <div class="footerBrand"><img src="/assets/rse-mark-white.png?v=20261023-logo" alt="RCHID SALAH EDDINE Architecte"><span>© <span id="year"></span> RCHID SALAH EDDINE • ARCHITECTE</span></div>
-  <div>Architecture • Urbanisme • Design</div>
+  <div class="footerAddress"><a href="https://www.google.com/maps/search/?api=1&query=Avenue+Sebou+Hamria+Mekn%C3%A8s" target="_blank" rel="noopener">Avenue Sebou, Imm. 4/8, Bureau 13, 3e étage, Hamria, Meknès</a><span><a href="tel:+212664171210">+212 664 171 210</a> · <a href="mailto:salah.rchid1@gmail.com">salah.rchid1@gmail.com</a></span></div>
 </footer>
 <div id="projectModal" class="modal hidden" onclick="if(event.target===this)closeProject()">
   <div class="modalCard">
@@ -407,6 +419,7 @@
       <h3 id="modalTitle"></h3>
       <div class="projectMetaDetail"><span data-i18n="locationLabel">Localisation / adresse</span><p id="modalLocation"></p></div>
       <p id="modalDescription"></p>
+      <button id="nextProject" class="pfNextProject" type="button"><span data-i18n="pfNext">Projet suivant</span> <b id="nextProjectName"></b></button>
       <div id="modalProgrammeWrap" class="modalProgramme hidden"><span data-i18n="designIntentLabel">Parti / vue architecturale</span><p id="modalProgramme"></p></div>
     </div>
   </div>
@@ -473,6 +486,20 @@ document.querySelectorAll('.staticProjectCard').forEach(card=>{
   card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openStaticProject(card);}});
 });
 
+(function(){const t=document.querySelector('.topbar');const f=()=>document.documentElement.style.setProperty('--hdr',t.offsetHeight+'px');f();addEventListener('resize',f);})();
+/* Compteurs des filtres + projet suivant */
+(function(){
+  const cards=[...document.querySelectorAll('.staticProjectCard')];
+  document.querySelectorAll('.staticFilter').forEach(b=>{const c=b.dataset.cat;b.querySelector('.fc').textContent=c==='Tous'?cards.length:cards.filter(x=>x.dataset.category===c).length;});
+  const L={fr:['projet','projets'],en:['project','projects'],ar:['مشروع','مشاريع']};
+  window.pfUpdateCount=function(){const n=cards.filter(c=>!c.hidden).length;const l=L[document.documentElement.lang]||L.fr;document.querySelector('.pfCount').textContent=n+' '+(n>1?l[1]:l[0]);};
+  document.querySelectorAll('.staticFilter').forEach(b=>b.addEventListener('click',()=>setTimeout(pfUpdateCount,0)));
+  document.addEventListener('click',e=>{if(e.target.closest('.langSwitch button'))setTimeout(pfUpdateCount,0)});
+  pfUpdateCount();
+  let current=null;
+  const _open=openStaticProject;
+  openStaticProject=function(card){current=card;_open(card);const vis=cards.filter(c=>!c.hidden);const nx=vis[(vis.indexOf(card)+1)%vis.length];document.getElementById('nextProjectName').textContent=nx.querySelector('h3').textContent;document.getElementById('nextProject').onclick=()=>{openStaticProject(nx);document.querySelector('.modalCard').scrollTop=0;};};
+})();
 /* Ouvrir un projet depuis l'accueil : /portfolio.html?p=N */
 (function(){const n=parseInt(new URLSearchParams(location.search).get('p'),10);const cards=document.querySelectorAll('.staticProjectCard');if(n>0&&cards[n-1]){cards[n-1].scrollIntoView({block:'center'});setTimeout(()=>openStaticProject(cards[n-1]),250);}})();
 /* Slider: swipe (mobile), clavier, compteur */
@@ -488,6 +515,6 @@ document.querySelectorAll('.staticProjectCard').forEach(card=>{
   document.addEventListener('keydown',e=>{ if(document.getElementById('projectModal').classList.contains('hidden'))return; if(e.key==='ArrowRight')go(1); else if(e.key==='ArrowLeft')go(-1); else if(e.key==='Escape')closeProject(); });
 })();
 </script>
-<script src="/site-i18n.js?v=20261023-cred"></script>
+<script src="/site-i18n.js?v=20261023-draft"></script>
 </body>
 </html>

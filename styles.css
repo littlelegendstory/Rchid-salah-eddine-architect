@@ -1167,3 +1167,120 @@ html[dir="rtl"] .hero.heroPhoto .heroOverlay{background:linear-gradient(270deg,r
 .credentials dt{font-size:10px;letter-spacing:2.2px;text-transform:uppercase;color:#8b7650;margin-bottom:6px}
 .credentials dd{margin:0;font-size:16px;color:#111}
 @media (max-width:560px){.credentials{grid-template-columns:1fr}}
+
+/* ================= PORTFOLIO — editorial pass ================= */
+.pfHero{padding:clamp(130px,16vw,190px) max(6vw,20px) clamp(50px,6vw,80px)!important;background:#0d0d0d!important;color:#f4f0e8!important}
+.pfHero h1{font-size:clamp(54px,9vw,128px)!important;font-weight:300!important;letter-spacing:-.045em!important;line-height:.95!important;margin:18px 0 26px!important;color:#fff!important}
+.pfHero>p{max-width:640px!important;font-size:16px!important;line-height:1.75!important;color:#bdb8ae!important;margin:0!important}
+.pfStats{display:flex;gap:clamp(28px,6vw,90px);margin-top:46px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12);flex-wrap:wrap}
+.pfStats div{display:flex;flex-direction:column;gap:6px}
+.pfStats strong{font-size:clamp(30px,3.4vw,44px);font-weight:300;color:#d9c39e;line-height:1}
+.pfStats span{font-size:12px;letter-spacing:.5px;color:#9e998f}
+.pfSection{padding-top:0!important;background:#f4f2ee}
+.pfFilters{position:sticky;top:var(--hdr,80px);z-index:20;background:rgba(244,242,238,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex!important;gap:6px!important;flex-wrap:nowrap!important;overflow-x:auto;scrollbar-width:none;margin:0 calc(-1*max(6vw,20px)) !important;padding:18px max(6vw,20px)!important;border-bottom:1px solid #e2ddd3}
+.pfFilters::-webkit-scrollbar{display:none}
+.pfFilters .staticFilter{flex:0 0 auto;white-space:nowrap;border:1px solid transparent!important;background:transparent!important;color:#555!important;padding:9px 14px!important;font-size:12px!important;letter-spacing:.6px!important;border-radius:999px!important;cursor:pointer;transition:all .2s}
+.pfFilters .staticFilter:hover{color:#111!important;border-color:#cfc7b8!important}
+.pfFilters .staticFilter.active{background:#111!important;color:#fff!important;border-color:#111!important}
+.pfFilters .fc{font-size:9px;margin-left:5px;opacity:.6;vertical-align:super}
+.pfCount{margin:28px 0 18px!important;font-size:11px!important;letter-spacing:2.4px!important;text-transform:uppercase;color:#8b7650!important}
+.pfSection .staticPortfolioGrid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:44px 26px!important}
+.pfSection .staticProjectCard{background:transparent!important;border:0!important;box-shadow:none!important;transform:none!important}
+.pfSection .staticProjectCard:hover{transform:none!important;box-shadow:none!important}
+.pfSection .staticProjectMedia{aspect-ratio:4/3!important;background:#1b1b1b}
+.pfSection .staticProjectMedia img{transition:transform 1s cubic-bezier(.2,.7,.2,1),filter .6s;aspect-ratio:auto!important}
+.pfSection .staticProjectCard:hover .staticProjectMedia img{transform:scale(1.045)}
+.pfSection .staticProjectNumber{background:rgba(13,13,13,.75)!important;font-size:10px!important;letter-spacing:2px!important;padding:6px 9px!important}
+.pfSection .staticProjectBody{padding:18px 0 0!important;background:transparent!important}
+.pfSection .staticProjectBody h3{font-size:19px!important;font-weight:500!important;letter-spacing:.2px!important;margin:8px 0 4px!important;text-transform:none}
+.pfSection .staticProjectCity{color:#777!important;font-size:13px!important;margin:0!important}
+.pfSection .staticProjectBody>p:not(.staticProjectCity){font-size:13.5px!important;color:#555!important;margin-top:10px!important;line-height:1.6!important}
+.pfOpen{display:inline-block;margin-top:14px;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#111;border-bottom:1px solid transparent;transition:border-color .25s,color .25s}
+.staticProjectCard:hover .pfOpen,.staticProjectCard:focus .pfOpen{border-color:#b89f72;color:#8b7650}
+
+/* Project viewer */
+#projectModal{background:rgba(6,6,6,.94)!important;padding:0!important}
+#projectModal .modalCard{max-width:none!important;width:100vw!important;height:100dvh!important;max-height:none!important;background:#0e0e0e!important;color:#eee;display:grid!important;grid-template-columns:minmax(0,1fr) 400px;grid-template-rows:minmax(0,1fr) auto;overflow:hidden!important}
+#projectModal .modalMedia{grid-column:1;grid-row:1;background:#0e0e0e!important;min-height:0}
+#projectModal .modalMedia>img{width:100%!important;height:100%!important;max-height:none!important;object-fit:contain!important;background:#0e0e0e!important}
+#projectModal .modalThumbs{grid-column:1;grid-row:2;background:#0e0e0e!important;border:0!important;padding:12px 20px 18px!important;justify-content:center}
+#projectModal .modalThumbs img{width:84px!important;height:58px!important}
+#projectModal .modalThumbs button{opacity:.4;outline-offset:2px}
+#projectModal .modalThumbs button.active{opacity:1;outline:1px solid #d9c39e}
+#projectModal .modalContent{grid-column:2;grid-row:1/3;overflow-y:auto;padding:80px 38px 40px!important;border-left:1px solid rgba(255,255,255,.08);background:#141414}
+#projectModal .modalContent h3{color:#fff!important;font-size:30px!important;font-weight:300!important;line-height:1.15;letter-spacing:-.5px}
+#projectModal .modalContent p,#projectModal #modalLocation{color:#bdb8ae!important}
+#projectModal .projectMetaDetail span{color:#8b7650;font-size:10px;letter-spacing:2px;text-transform:uppercase}
+#projectModal .eyebrow{color:#d9c39e!important}
+#projectModal .closeBtn{position:fixed!important;right:18px!important;top:16px!important;background:rgba(255,255,255,.08)!important;color:#fff!important;border-radius:999px;width:44px!important;height:44px!important;z-index:10}
+#projectModal .closeBtn:hover{background:rgba(255,255,255,.18)!important}
+#projectModal .galleryNav{background:rgba(255,255,255,.1)!important;color:#fff!important;box-shadow:none!important;backdrop-filter:blur(6px)}
+#projectModal .galleryPrev{left:18px}#projectModal .galleryNext{right:18px}
+#projectModal .galleryNav:hover{background:rgba(255,255,255,.22)!important}
+.pfNextProject{margin-top:34px;width:100%;text-align:left;background:transparent;border:0;border-top:1px solid rgba(255,255,255,.12);padding:20px 0 0;color:#8b8680;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;cursor:pointer}
+.pfNextProject b{display:block;color:#fff;font-weight:400;font-size:15px;letter-spacing:.3px;text-transform:none;margin:8px 0 0}
+.pfNextProject:hover b{color:#d9c39e}
+
+@media (max-width:1000px){
+  .pfSection .staticPortfolioGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  #projectModal .modalCard{grid-template-columns:1fr;grid-template-rows:auto auto auto;overflow-y:auto!important}
+  #projectModal .modalMedia{grid-column:1;grid-row:1;height:58dvh}
+  #projectModal .modalThumbs{grid-row:2;justify-content:flex-start}
+  #projectModal .modalContent{grid-column:1;grid-row:3;border-left:0;padding:26px 22px 40px!important;overflow:visible}
+  #projectModal .galleryPrev{left:10px}#projectModal .galleryNext{right:10px}
+}
+@media (max-width:620px){
+  .pfSection .staticPortfolioGrid{grid-template-columns:1fr!important;gap:38px!important}
+  .pfFilters{top:var(--hdr,68px)}
+  #projectModal .modalMedia{height:46dvh}
+  #projectModal .modalContent h3{font-size:25px!important}
+  #projectModal .modalThumbs img{width:64px!important;height:44px!important}
+}
+html[dir="rtl"] .pfNextProject{text-align:right}
+html[dir="rtl"] #projectModal .modalContent{border-left:0;border-right:1px solid rgba(255,255,255,.08)}
+html[dir="rtl"] .pfFilters .fc{margin-left:0;margin-right:5px}
+.portfolioPageBody .portfolioPageMain{padding-top:0!important}
+.pfHero::before,.pfHero::after{display:none!important}
+#projectModal{inset:0!important;margin:0!important}
+#projectModal .modalCard{margin:0!important;border:0!important}
+.pfNextProject b::after{content:"  →";color:#d9c39e}
+
+/* Hero — architectural drafting composition */
+.hero.heroDraft{background:#0c0c0c!important}
+.heroDrawing{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero.heroDraft .heroOverlay{background:linear-gradient(90deg,rgba(12,12,12,.96) 0%,rgba(12,12,12,.75) 38%,rgba(12,12,12,0) 62%)!important}
+.heroDrawing .arcDraw{stroke-dasharray:1;stroke-dashoffset:1;animation:arcDraw 2.8s .6s cubic-bezier(.6,.1,.3,1) forwards}
+@keyframes arcDraw{to{stroke-dashoffset:0}}
+.heroDrawing .dl{opacity:0;animation:dlIn 1.6s .1s ease forwards}
+@keyframes dlIn{to{opacity:1}}
+.heroDrawing .compass{transform-origin:1120px 470px;animation:compassSwing 2.8s .6s cubic-bezier(.6,.1,.3,1) both}
+@keyframes compassSwing{from{transform:rotate(98deg)}to{transform:rotate(0)}}
+@media (prefers-reduced-motion:reduce){.heroDrawing .arcDraw,.heroDrawing .dl,.heroDrawing .compass{animation:none;opacity:1;stroke-dashoffset:0}}
+.heroAddress{text-transform:none!important;letter-spacing:.6px!important;font-size:12px!important}
+.heroAddress span{text-transform:uppercase;letter-spacing:2px;color:#d9c39e}
+@media (max-width:900px){
+  .heroDrawing{inset:auto 0 auto auto;top:70px;width:130%;height:62%;right:-38%;opacity:.55}
+  .hero.heroDraft .heroOverlay{background:linear-gradient(to top,rgba(12,12,12,.97) 0%,rgba(12,12,12,.8) 48%,rgba(12,12,12,.2) 100%)!important}
+  .heroAddress{font-size:10.5px!important;line-height:1.5;max-width:calc(100% - 40px)}
+}
+html[dir="rtl"] .hero.heroDraft .heroOverlay{background:linear-gradient(90deg,rgba(12,12,12,0) 38%,rgba(12,12,12,.75) 62%,rgba(12,12,12,.96) 100%)!important}
+html[dir="rtl"] .heroDrawing{transform:scaleX(-1)}
+html[dir="rtl"] .heroDrawing text{display:none}
+.hero.heroDraft{background-color:#0c0c0c!important;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px)!important;background-size:40px 40px,40px 40px,200px 200px,200px 200px!important}
+.heroDrawing{inset:auto!important;top:96px!important;right:2vw!important;bottom:20px!important;width:min(56vw,860px)!important;height:auto!important;opacity:1}
+.heroDrawing>rect{display:none}
+.hero.heroDraft .heroOverlay{background:linear-gradient(90deg,rgba(12,12,12,.92) 0%,rgba(12,12,12,.55) 40%,rgba(12,12,12,0) 58%)!important}
+@media (max-width:900px){
+  .heroDrawing{top:84px!important;right:-18vw!important;bottom:auto!important;width:92vw!important;height:auto!important;opacity:.42}
+}
+@media (min-width:901px){
+  .hero.heroDraft h1{font-size:clamp(54px,5.5vw,92px)!important}
+  .hero.heroDraft .heroContent{max-width:min(860px,64vw)!important}
+  .heroDrawing{top:100px!important;bottom:56px!important;right:1.5vw!important;width:min(42vw,780px)!important}
+  .hero.heroDraft .heroOverlay{background:linear-gradient(90deg,rgba(12,12,12,.94) 0%,rgba(12,12,12,.7) 45%,rgba(12,12,12,0) 66%)!important}
+}
+.footerAddress{display:flex;flex-direction:column;gap:6px;text-align:right;font-size:12px;line-height:1.6;color:#a9a49a}
+.footerAddress a{color:#d8d3c9;text-decoration:none}.footerAddress a:hover{color:#d9c39e}
+@media (max-width:800px){.footerAddress{text-align:left;margin-top:18px}}
+html[dir="rtl"] .footerAddress{text-align:left}
+@media (min-width:801px){footer{padding-bottom:84px!important}}
