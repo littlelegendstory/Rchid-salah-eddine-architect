@@ -1374,3 +1374,37 @@ html[dir="rtl"] .book2Quote{border-left:0;border-right:2px solid #b89f72;padding
 .trilogy li.done strong{color:#111}
 .trilogy li:hover{border-color:#b89f72}
 @media (max-width:900px){.book3 .book2Grid{grid-template-columns:1fr}.book3 .book2Visual{order:0}}
+
+/* ===== Mission — rôle de l'architecte ===== */
+.missionSection{background:#0f0f0f;color:#f1ece3}
+.missionSection .sectionLabel{color:#b69a6a}
+.missionHead{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:end}
+.missionHead h2{color:#fff}
+.missionHead p{font-size:17px;line-height:1.8;color:#bdb8ae;margin:0}
+.missionMosaic{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:240px 240px;gap:14px;margin:56px 0 70px}
+.missionMosaic figure{margin:0;position:relative;overflow:hidden;background:#1a1a1a}
+.missionMosaic .mmA{grid-row:span 2}
+.missionMosaic img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9) contrast(1.02);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.missionMosaic figure:hover img{transform:scale(1.04)}
+.missionMosaic figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 18px 14px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#e9e2d4;background:linear-gradient(to top,rgba(0,0,0,.7),transparent)}
+.missionSteps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);column-gap:6vw;counter-reset:none}
+.missionStep{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:30px 0;border-top:1px solid rgba(255,255,255,.1)}
+.missionStep:last-child{grid-column:1/-1}
+.missionNum{font:300 34px/1 Georgia,serif;color:#d9c39e}
+.missionStep h3{margin:2px 0 10px;font-size:21px;font-weight:400;color:#fff;letter-spacing:.2px}
+.missionStep p{margin:0 0 12px;font-size:15px;line-height:1.75;color:#b5b0a6}
+.missionStep small{font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;color:#8b7650}
+.missionNote{margin-top:50px;padding:34px 36px;border:1px solid rgba(217,195,158,.35);display:flex;align-items:center;justify-content:space-between;gap:30px;background:linear-gradient(120deg,rgba(217,195,158,.07),transparent)}
+.missionNote h3{margin:0 0 8px;font-size:22px;font-weight:400;color:#fff}
+.missionNote p{margin:0;color:#bdb8ae;line-height:1.7;max-width:720px;font-size:15px}
+.missionNote .btn{flex:0 0 auto;background:#d9c39e!important;color:#111!important;border-color:#d9c39e!important}
+@media (max-width:900px){
+  .missionHead{grid-template-columns:1fr;gap:22px}
+  .missionMosaic{grid-template-columns:1fr 1fr;grid-template-rows:220px 160px;margin:40px 0 50px}
+  .missionMosaic .mmA{grid-column:1/-1;grid-row:auto}
+  .missionSteps{grid-template-columns:1fr}
+  .missionStep{grid-template-columns:48px 1fr}
+  .missionNum{font-size:28px}
+  .missionNote{flex-direction:column;align-items:flex-start;padding:26px 22px}
+}
+html[dir="rtl"] .missionStep{direction:rtl}
