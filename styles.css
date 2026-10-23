@@ -1358,3 +1358,5 @@ html[dir="rtl"] .footerAddress{text-align:left}
 .trilogy li.current strong{color:#fff}.trilogy li.current span{color:#d9c39e}
 @media (max-width:900px){.book2Grid{grid-template-columns:1fr}.book2Visual{position:static}.trilogy ol{grid-template-columns:1fr}}
 html[dir="rtl"] .book2Quote{border-left:0;border-right:2px solid #b89f72;padding:22px 26px 22px 0}
+.book2CoverImg{height:auto;border-radius:2px}
+.book2Sub{margin:-6px 0 18px;font-size:11px;letter-spacing:2.4px;text-transform:uppercase;color:#8b7650}
