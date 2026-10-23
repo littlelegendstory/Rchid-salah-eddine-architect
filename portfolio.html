@@ -240,14 +240,18 @@
 
 <article class="staticProjectCard" data-category="Commerce">
   <div class="staticProjectMedia">
-    <img src="https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/e903b6b8-fb01-4c5e-8df7-3a9a6aac61aa.jpg" alt="CENTRE COMMERCIAL ATTAYSSIR" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+    <img src="/assets/projects/centre-commercial-attayssir/1.jpg" alt="Centre commercial Attayssir — façade de nuit, Toulal, Meknès" loading="lazy" decoding="async" width="1170" height="731">
     <div class="staticProjectNumber">11</div>
   </div>
   <div class="staticProjectBody">
     <div class="staticProjectCategory">Commerce</div>
     <h3>CENTRE COMMERCIAL ATTAYSSIR</h3>
-    <p class="staticProjectCity">Maroc</p>
-    <p>Façade linéaire, transparence et éclairage signature.</p>
+    <p class="staticProjectCity">Toulal, Meknès, Maroc</p>
+    <p class="staticProjectProgram" data-i18n="progAttayssir">Construction d’un groupe commercial et d’un lotissement de villas</p>
+    <dl class="staticProjectFacts">
+      <div><dt data-i18n="factTerrain">Surface terrain</dt><dd>4 000 m²</dd></div>
+    </dl>
+    <p class="pfDesc">Ensemble commercial contemporain associé à un lotissement de villas, sur un terrain de 4 000 m² à Toulal. Le bâtiment se développe en une longue façade linéaire de showrooms et de commerces — automobile, carrelage, bois, ameublement — ouverts sur la rue par de grandes vitrines continues. À l’étage, un bandeau vitré éclaire les espaces supérieurs, tandis que des lignes LED soulignent les acrotères et les auvents et donnent au centre une signature nocturne. Le plan organise les accès, le stationnement et les parcours piétons, et assure l’intégration du programme dans le tissu urbain.</p>
     <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
@@ -508,6 +512,7 @@ document.querySelectorAll('.staticFilter').forEach(btn=>{
 document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('menuOpen')));
 
 const galleryMap = {
+  'CENTRE COMMERCIAL ATTAYSSIR': ['/assets/projects/centre-commercial-attayssir/1.jpg','/assets/projects/centre-commercial-attayssir/2.jpg','/assets/projects/centre-commercial-attayssir/3.jpg','/assets/projects/centre-commercial-attayssir/4.jpg','/assets/projects/centre-commercial-attayssir/5.jpg'],
   'POULAILLER DE POULES REPRODUCTRICES': ['/assets/projects/poulailler-poules-reproductrices/1.jpg','/assets/projects/poulailler-poules-reproductrices/2.jpg','/assets/projects/poulailler-poules-reproductrices/3.jpg'],
   'UNITÉ DE STOCKAGE & FROID INDUSTRIEL': ['/assets/projects/unite-stockage-froid/1.jpg','/assets/projects/unite-stockage-froid/2.jpg','/assets/projects/unite-stockage-froid/3.jpg'],
   'CENTRE DE JOUR SOCIO-ÉDUCATIF': ['/assets/projects/centre-de-jour-socio-educatif/1.jpg','/assets/projects/centre-de-jour-socio-educatif/2.jpg'],
@@ -591,6 +596,6 @@ document.querySelectorAll('.staticProjectCard').forEach(card=>{
   document.addEventListener('keydown',e=>{ if(document.getElementById('projectModal').classList.contains('hidden'))return; if(e.key==='ArrowRight')go(1); else if(e.key==='ArrowLeft')go(-1); else if(e.key==='Escape')closeProject(); });
 })();
 </script>
-<script src="/site-i18n.js?v=20261023-noyears"></script>
+<script src="/site-i18n.js?v=20261023-att"></script>
 </body>
 </html>
