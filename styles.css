@@ -1068,3 +1068,28 @@ html[dir="rtl"] .langSwitch{border-left:0;border-right:1px solid rgba(255,255,25
   .headerBrandText small{font-size:6.5px!important;letter-spacing:2.8px!important}
   .topbar nav{top:74px!important}
 }
+
+/* === OFFICIAL LOGO 2026-10 (mark + wordmark) — final override === */
+.headerBrand{display:flex!important;align-items:center!important;gap:14px!important}
+.headerLogoMark{width:78px!important;height:50px!important;object-fit:contain!important;background:transparent!important;padding:0!important;border:0!important;filter:none!important;opacity:1!important;flex:0 0 auto!important}
+.headerBrandText strong{font-size:15px!important;letter-spacing:2.4px!important;color:#fff!important}
+.headerBrandText small{font-size:9px!important;letter-spacing:5px!important;color:rgba(255,255,255,.7)!important}
+.footerBrand img{width:64px!important;height:41px!important;object-fit:contain!important;filter:none!important;opacity:1!important}
+.architectLogoPanel{display:grid!important;place-items:center!important;padding:32px!important}
+.architectLogoPanel img{width:100%!important;max-width:420px!important;height:auto!important;object-fit:contain!important;filter:none!important;opacity:1!important}
+@media (max-width:900px){
+  .headerLogoMark{width:62px!important;height:40px!important}
+  .headerBrand{gap:10px!important}
+  .headerBrandText strong{font-size:12px!important;letter-spacing:1.5px!important}
+  .headerBrandText small{font-size:7px!important;letter-spacing:3.4px!important}
+}
+@media (max-width:420px){
+  .headerLogoMark{width:54px!important;height:35px!important}
+  .headerBrandText strong{font-size:10.5px!important;letter-spacing:1.1px!important}
+  .headerBrandText small{font-size:6.5px!important;letter-spacing:2.8px!important}
+  .architectLogoPanel img{max-width:300px!important}
+}
+.modalMedia{position:relative}
+.galleryCounter{position:absolute;right:12px;bottom:12px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;letter-spacing:1px;padding:4px 10px;border-radius:20px;pointer-events:none}
+.galleryCounter:empty{display:none}
+#modalThumbs{overflow-x:auto;scroll-snap-type:x mandatory}
