@@ -1409,3 +1409,10 @@ html[dir="rtl"] .book2Quote{border-left:0;border-right:2px solid #b89f72;padding
 }
 html[dir="rtl"] .missionStep{direction:rtl}
 .credentials .credWide{grid-column:1/-1}
+.architectPortrait{margin:0;position:relative;align-self:start;position:sticky;top:110px}
+.architectPortrait img{width:100%;max-width:440px;aspect-ratio:3/4;object-fit:cover;object-position:center 30%;display:block;filter:contrast(1.03);box-shadow:0 30px 60px rgba(0,0,0,.18)}
+.architectPortrait figcaption{max-width:440px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px 0;border-bottom:1px solid #d6cfc2;padding-bottom:12px}
+.architectPortrait strong{font-weight:500;font-size:15px;letter-spacing:.4px;color:#111}
+.architectPortrait span{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8b7650}
+@media (max-width:900px){.architectPortrait{position:static}.architectPortrait img,.architectPortrait figcaption{max-width:none}}
+.architectPortrait img{height:auto!important}
