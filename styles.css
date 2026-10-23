@@ -1161,3 +1161,9 @@ html[dir="rtl"] .hero.heroPhoto .heroOverlay{background:linear-gradient(270deg,r
 .offerSection h2,.offerCTA h2,.v3Section h2,.v3CTA h2{font-weight:300!important;letter-spacing:-.025em!important}
 .offerCard h3,.offerStep h3,.v3Card h3,.v3Step h3{font-weight:500!important}
 .offerBtn,.v3Btn{font-weight:500!important;letter-spacing:.5px}
+.keyFacts strong small{font-size:.45em;letter-spacing:0;margin-left:4px;color:#bdb8ae}
+.credentials{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;margin:28px 0 30px;padding:0}
+.credentials>div{border-top:1px solid #d6cfc2;padding:14px 0}
+.credentials dt{font-size:10px;letter-spacing:2.2px;text-transform:uppercase;color:#8b7650;margin-bottom:6px}
+.credentials dd{margin:0;font-size:16px;color:#111}
+@media (max-width:560px){.credentials{grid-template-columns:1fr}}
