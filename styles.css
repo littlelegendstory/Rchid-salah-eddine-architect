@@ -1479,3 +1479,6 @@ html[dir="rtl"] .statusBadge:not(.inline){right:auto;left:14px}
 }
 .chGallery.chN2 .chImg,.chGallery.chN2 .chImg:nth-child(2){aspect-ratio:auto!important;height:440px}
 @media (max-width:900px){.chGallery.chN2{grid-template-columns:1.5fr 1fr}.chGallery.chN2 .chImg,.chGallery.chN2 .chImg:nth-child(2){height:240px}}
+.pfDownload{display:inline-block;margin-top:26px}.featuredHead>a.textLink+a.textLink{margin-left:0}
+.featuredLinks{display:flex;flex-wrap:wrap;gap:14px 0}
+.pfHero .pfDownload{display:inline-flex!important;width:auto!important;margin-top:28px!important;background:#d9c39e!important;color:#111!important;border:1px solid #d9c39e!important;padding:14px 22px!important;font-weight:500;letter-spacing:.8px}
