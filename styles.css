@@ -1311,3 +1311,16 @@ html[dir="rtl"] .footerAddress{text-align:left}
   #projectModal .galleryNav{top:calc(50% + 32px)!important}
   #projectModal .galleryCounter{bottom:10px;right:12px}
 }
+
+/* Hero drawing — always visible (no hidden start state), stronger on mobile */
+.heroDrawing .dl{opacity:1!important;animation:dlIn2 1.6s .1s ease backwards!important}
+@keyframes dlIn2{from{opacity:0}to{opacity:1}}
+.heroDrawing .arcDraw{stroke-dasharray:1;stroke-dashoffset:0!important;animation:arcDraw2 2.8s .6s cubic-bezier(.6,.1,.3,1) backwards!important}
+@keyframes arcDraw2{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.heroDrawing .compass{transform-box:view-box;transform-origin:1120px 470px;animation:compassSwing 2.8s .6s cubic-bezier(.6,.1,.3,1) backwards!important}
+@media (max-width:900px){
+  .hero.heroDraft{min-height:100svh!important;align-items:flex-end!important}
+  .heroDrawing{top:72px!important;left:50%!important;right:auto!important;bottom:auto!important;transform:translateX(-50%);width:min(118vw,620px)!important;height:auto!important;opacity:.85!important}
+  .hero.heroDraft .heroOverlay{background:linear-gradient(to top,rgba(12,12,12,.98) 0%,rgba(12,12,12,.92) 38%,rgba(12,12,12,.35) 62%,rgba(12,12,12,0) 80%)!important}
+  html[dir="rtl"] .heroDrawing{transform:translateX(-50%) scaleX(-1)}
+}
