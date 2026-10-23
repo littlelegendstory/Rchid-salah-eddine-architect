@@ -396,14 +396,15 @@
 
 <article class="staticProjectCard" data-category="Industrie">
   <div class="staticProjectMedia">
-    <img src="https://d2ol7oe51mr4n9.cloudfront.net/user_3IxGmACzhF6eSa4R14nr3uGHdFy/b09e87a0-8478-4f63-a597-747bb9bab7d3.jpg" alt="POULAILLER DE POULES REPRODUCTRICES" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+    <img src="/assets/projects/poulailler-poules-reproductrices/1.jpg" alt="Poulailler de poules reproductrices — vue aérienne du site" loading="lazy" decoding="async" width="1055" height="672">
     <div class="staticProjectNumber">21</div>
   </div>
   <div class="staticProjectBody">
     <div class="staticProjectCategory">Industrie</div>
     <h3>POULAILLER DE POULES REPRODUCTRICES</h3>
     <p class="staticProjectCity">El Hajeb, Maroc</p>
-    <p>Biosécurité, trame répétitive et flux maîtrisés.</p>
+    <p class="staticProjectProgram" data-i18n="progPoulailler">Construction d’un complexe avicole de poules reproductrices</p>
+        <p class="pfDesc">Complexe agro-industriel avicole dédié à l’élevage de poules reproductrices. Le site s’organise selon une trame répétitive de longs bâtiments d’élevage parallèles, équipés de ventilation et de silos d’aliment, desservis par des voies de circulation séparées pour maîtriser les flux et la biosécurité. À l’entrée, un poste de contrôle et un bâtiment administratif aux façades claires et lames de bois accueillent le personnel, tandis que des locaux techniques, réserves d’eau et une aire de chargement complètent l’ensemble, intégré dans un paysage d’oliviers.</p>
     <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
@@ -512,6 +513,7 @@ document.querySelectorAll('.staticFilter').forEach(btn=>{
 document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('menuOpen')));
 
 const galleryMap = {
+  'POULAILLER DE POULES REPRODUCTRICES': ['/assets/projects/poulailler-poules-reproductrices/1.jpg','/assets/projects/poulailler-poules-reproductrices/2.jpg','/assets/projects/poulailler-poules-reproductrices/3.jpg'],
   'UNITÉ DE STOCKAGE & FROID INDUSTRIEL': ['/assets/projects/unite-stockage-froid/1.jpg','/assets/projects/unite-stockage-froid/2.jpg','/assets/projects/unite-stockage-froid/3.jpg'],
   'CENTRE DE JOUR SOCIO-ÉDUCATIF': ['/assets/projects/centre-de-jour-socio-educatif/1.jpg','/assets/projects/centre-de-jour-socio-educatif/2.jpg'],
   'HÔTEL RELAXE TARFAYA': ['/assets/projects/hotel-relaxe-tarfaya/1.jpg','/assets/projects/hotel-relaxe-tarfaya/2.jpg','/assets/projects/hotel-relaxe-tarfaya/3.jpg','/assets/projects/hotel-relaxe-tarfaya/4.jpg'],
@@ -594,6 +596,6 @@ document.querySelectorAll('.staticProjectCard').forEach(card=>{
   document.addEventListener('keydown',e=>{ if(document.getElementById('projectModal').classList.contains('hidden'))return; if(e.key==='ArrowRight')go(1); else if(e.key==='ArrowLeft')go(-1); else if(e.key==='Escape')closeProject(); });
 })();
 </script>
-<script src="/site-i18n.js?v=20261023-froid"></script>
+<script src="/site-i18n.js?v=20261023-poul"></script>
 </body>
 </html>
