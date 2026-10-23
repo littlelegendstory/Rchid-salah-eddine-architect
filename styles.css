@@ -1428,3 +1428,5 @@ html[dir="rtl"] .missionStep{direction:rtl}
 .keyFacts{grid-template-columns:repeat(3,1fr)!important}
 .keyFacts>div:nth-child(3){border-right:0!important}
 @media (max-width:900px){.keyFacts{grid-template-columns:1fr!important}.keyFacts>div{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.08)}.keyFacts>div:last-child{border-bottom:0}}
+.pfFilters .fc,.pfCount{display:none!important}
+.pfSection .staticPortfolioGrid{margin-top:34px}
