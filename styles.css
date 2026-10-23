@@ -1360,3 +1360,8 @@ html[dir="rtl"] .footerAddress{text-align:left}
 html[dir="rtl"] .book2Quote{border-left:0;border-right:2px solid #b89f72;padding:22px 26px 22px 0}
 .book2CoverImg{height:auto;border-radius:2px}
 .book2Sub{margin:-6px 0 18px;font-size:11px;letter-spacing:2.4px;text-transform:uppercase;color:#8b7650}
+.book2Copy h2.book2BookTitle{font-size:clamp(34px,4vw,58px);line-height:1.05}
+.book2Meta{display:grid;grid-template-columns:1fr 1fr;max-width:520px;margin:6px 0 10px;border-top:1px solid #d9d3c7}
+.book2Meta>div{padding:12px 12px 0 0}
+.book2Meta dt{font-size:10px;letter-spacing:2.2px;text-transform:uppercase;color:#8b7650;margin-bottom:4px}
+.book2Meta dd{margin:0;font-size:16px;color:#111}
