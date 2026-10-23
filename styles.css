@@ -1435,3 +1435,47 @@ html[dir="rtl"] .missionStep{direction:rtl}
 .statusBadge.statusOngoing{background:rgba(13,13,13,.8);color:#d9c39e;border:1px solid #d9c39e}
 .statusBadge.inline{position:static;display:inline-block;margin-left:10px;padding:3px 8px;font-size:9px;vertical-align:middle}
 html[dir="rtl"] .statusBadge:not(.inline){right:auto;left:14px}
+
+/* ===== Page Suivi de chantier ===== */
+.chHero h1 em{font-family:Lora,Georgia,serif;font-style:italic;color:#d9c39e;font-weight:400}
+.chSection{background:#f4f2ee;padding-top:0!important}
+.chFilters{margin-bottom:10px!important}
+.chItem{padding:56px 0;border-bottom:1px solid #ddd6ca}
+.chItem[hidden]{display:none}
+.chHead{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:end;margin-bottom:28px}
+.chHead h2{font-size:clamp(28px,3.2vw,44px)!important;font-weight:300;margin:14px 0 6px!important;line-height:1.1}
+.chLoc{margin:0;color:#8b7650;font-size:13px;letter-spacing:1.4px;text-transform:uppercase}
+.chDesc{margin:0 0 14px;color:#555;font-size:15.5px;line-height:1.75}
+.chHead .statusBadge.inline{margin-left:0}
+.chGallery{display:grid;gap:10px}
+.chGallery.chN2{grid-template-columns:1.6fr 1fr}
+.chGallery.chN3{grid-template-columns:repeat(3,1fr)}
+.chGallery.chN4{grid-template-columns:repeat(4,1fr)}
+.chImg{border:0;padding:0;margin:0;background:#1a1a1a;cursor:zoom-in;overflow:hidden;display:block;aspect-ratio:4/3}
+.chImg.chPortrait{aspect-ratio:9/14}
+.chGallery.chN2 .chImg:nth-child(2){aspect-ratio:auto}
+.chImg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.chImg:hover img{transform:scale(1.04)}
+.chCta{margin-top:56px;background:#0f0f0f!important}
+.chCta h3{color:#fff}.chCta p{color:#bdb8ae}
+.chLightbox{position:fixed;inset:0;z-index:200;background:rgba(6,6,6,.96);display:flex;align-items:center;justify-content:center}
+.chLightbox.hidden{display:none}
+.chLightbox img{max-width:92vw;max-height:86vh;object-fit:contain}
+.chLbClose{position:fixed;right:18px;top:16px;width:44px;height:44px;border-radius:999px;border:0;background:rgba(255,255,255,.1);color:#fff;font-size:26px;cursor:pointer}
+.chLbNav{position:fixed;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:999px;border:0;background:rgba(255,255,255,.1);color:#fff;font-size:30px;cursor:pointer}
+.chLbPrev{left:18px}.chLbNext{right:18px}
+.chLbCount{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);color:#ddd;font-size:12px;letter-spacing:1px}
+.missionChLink{margin-right:18px;color:#d9c39e!important;border-color:rgba(217,195,158,.5)!important}
+.missionNote>a.textLink+a.btn{margin-left:0}
+@media (max-width:900px){
+  .chHead{grid-template-columns:1fr;gap:12px}
+  .chGallery.chN3,.chGallery.chN4{grid-template-columns:1fr 1fr}
+  .chGallery.chN3 .chImg:first-child{grid-column:1/-1}
+  .chGallery.chN3 .chImg.chPortrait:first-child{grid-column:auto}
+  .chGallery.chN3:has(.chPortrait){grid-template-columns:repeat(3,1fr)}
+  .chGallery.chN2{grid-template-columns:1fr}
+  .chGallery.chN2 .chImg:nth-child(2){aspect-ratio:3/4}
+  .chItem{padding:40px 0}
+}
+.chGallery.chN2 .chImg,.chGallery.chN2 .chImg:nth-child(2){aspect-ratio:auto!important;height:440px}
+@media (max-width:900px){.chGallery.chN2{grid-template-columns:1.5fr 1fr}.chGallery.chN2 .chImg,.chGallery.chN2 .chImg:nth-child(2){height:240px}}
