@@ -1408,3 +1408,4 @@ html[dir="rtl"] .book2Quote{border-left:0;border-right:2px solid #b89f72;padding
   .missionNote{flex-direction:column;align-items:flex-start;padding:26px 22px}
 }
 html[dir="rtl"] .missionStep{direction:rtl}
+.credentials .credWide{grid-column:1/-1}
