@@ -1430,3 +1430,8 @@ html[dir="rtl"] .missionStep{direction:rtl}
 @media (max-width:900px){.keyFacts{grid-template-columns:1fr!important}.keyFacts>div{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.08)}.keyFacts>div:last-child{border-bottom:0}}
 .pfFilters .fc,.pfCount{display:none!important}
 .pfSection .staticPortfolioGrid{margin-top:34px}
+.statusBadge{position:absolute;right:14px;top:14px;z-index:2;font-size:10px;letter-spacing:1.8px;text-transform:uppercase;padding:6px 10px;font-weight:600}
+.statusBadge.statusDone{background:#d9c39e;color:#111}
+.statusBadge.statusOngoing{background:rgba(13,13,13,.8);color:#d9c39e;border:1px solid #d9c39e}
+.statusBadge.inline{position:static;display:inline-block;margin-left:10px;padding:3px 8px;font-size:9px;vertical-align:middle}
+html[dir="rtl"] .statusBadge:not(.inline){right:auto;left:14px}
