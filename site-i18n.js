@@ -102,7 +102,7 @@ en:{c:"Industry",d:"Sanitary process, separated flows and functional architectur
 en:{c:"Subdivision & urban planning",d:"Masterplan for an activity subdivision structured around seven plots, readable access, parking and integrated landscaping."},ar:{c:"تجزئة وتهيئة حضرية",d:"مخطط توجيهي لتجزئة أنشطة منظمة حول سبع قطع وولوج واضح ومواقف سيارات ومعالجة مندمجة للمنظر."}},
 "LOTISSEMENT OUISLANE":{
 en:{c:"Subdivision & urban planning",d:"Residential subdivision with 38 plots, leisure facility, green spaces and a clear hierarchy of streets."},ar:{c:"تجزئة وتهيئة حضرية",d:"تجزئة سكنية تضم 38 قطعة وتجهيزاً للترفيه ومساحات خضراء وشبكة طرق متدرجة وواضحة."}},
-"PLAN DIRECTEUR DU LOTISSEMENT TAWENZQ":{
+"PLAN DIRECTEUR DU LOTISSEMENT TAWENZA":{
 en:{c:"Subdivision & urban planning",d:"Mixed-use masterplan bringing together housing, retail, local facilities, green spaces and sector-based streets."},ar:{c:"تجزئة وتهيئة حضرية",d:"مخطط توجيهي مختلط يجمع السكن والتجارة وتجهيزات القرب والمساحات الخضراء وطرقاً منظمة حسب القطاعات."}}
 };
 
