@@ -1327,3 +1327,34 @@ html[dir="rtl"] .footerAddress{text-align:left}
 .contactMapEmbed{margin-top:18px;border:1px solid #d9d3c7;aspect-ratio:16/10;overflow:hidden;background:#eee}
 .contactMapEmbed iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(.35) contrast(1.05)}
 .architectBookLink{display:inline-block;margin-top:10px}
+
+/* Book 2 — La Civilisation */
+.book2{background:#f5f1e9;color:#111}
+.book2Grid{display:grid;grid-template-columns:minmax(260px,.8fr) minmax(0,1.2fr);gap:clamp(36px,6vw,90px);align-items:start}
+.book2Visual{position:sticky;top:120px;display:flex;justify-content:center}
+.book2Cover,.book2CoverImg{width:min(380px,74vw);aspect-ratio:2/3;box-shadow:0 30px 70px rgba(0,0,0,.28);transform:perspective(1200px) rotateY(-6deg)}
+.book2Cover{position:relative;background:linear-gradient(160deg,#1c1813 0%,#0d0c0a 65%);color:#efe7d8;padding:40px 32px;box-sizing:border-box;overflow:hidden}
+.book2Cover:before{content:"";position:absolute;width:150%;aspect-ratio:1;border:1px solid rgba(217,195,158,.28);border-radius:50%;right:-80%;top:22%}
+.book2CoverEdition{display:block;font-size:10px;letter-spacing:3px;color:#d9c39e}
+.book2CoverTitle{display:block;margin-top:38%;font:400 clamp(34px,4.4vw,56px)/1.02 Georgia,serif}
+.book2CoverLine{display:block;width:54px;height:1px;background:#d9c39e;margin:22px 0}
+.book2CoverAuthor{position:absolute;left:32px;right:32px;bottom:34px;font-size:9px;letter-spacing:2.6px;color:#bdb5a6}
+.book2CoverImg{object-fit:cover;display:block}
+.book2Copy h2{font-size:clamp(40px,5vw,72px);font-weight:300;letter-spacing:-.03em;margin:10px 0 18px}
+.book2Lead{font-size:clamp(17px,1.6vw,21px);line-height:1.6;color:#333;max-width:680px}
+.book2Label{margin:34px 0 10px;font-size:10px;letter-spacing:2.6px;color:#8b7650}
+.book2Copy>p:not(.book2Lead):not(.book2Close){font-size:16px;line-height:1.85;color:#444;max-width:680px}
+.book2Quote{margin:34px 0 18px;padding:22px 0 22px 26px;border-left:2px solid #b89f72;font:400 clamp(22px,2.4vw,32px)/1.35 Georgia,serif;color:#111;max-width:680px}
+.book2Close{font-style:italic;color:#5c5346;font-size:16px;line-height:1.8;max-width:680px}
+.trilogy{margin-top:clamp(50px,7vw,90px);border-top:1px solid #d9d3c7;padding-top:28px}
+.trilogyLabel{font-size:10px;letter-spacing:2.6px;color:#8b7650;margin-bottom:16px}
+.trilogy ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.trilogy li{border:1px solid #d9d3c7;padding:18px 20px;display:flex;flex-direction:column;gap:6px;color:#888}
+.trilogy li span{font-size:10px;letter-spacing:2px;text-transform:uppercase}
+.trilogy li strong{font-weight:400;font-size:20px;color:#999}
+.trilogy li em{font-style:normal;font-size:11px;letter-spacing:1px;color:#aaa}
+.trilogy li.done strong{color:#111}
+.trilogy li.current{background:#111;border-color:#111}
+.trilogy li.current strong{color:#fff}.trilogy li.current span{color:#d9c39e}
+@media (max-width:900px){.book2Grid{grid-template-columns:1fr}.book2Visual{position:static}.trilogy ol{grid-template-columns:1fr}}
+html[dir="rtl"] .book2Quote{border-left:0;border-right:2px solid #b89f72;padding:22px 26px 22px 0}
