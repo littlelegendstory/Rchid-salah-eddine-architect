@@ -340,6 +340,7 @@
 
 <article class="staticProjectCard" data-category="Équipement">
   <div class="staticProjectMedia">
+    <span class="statusBadge statusOngoing" data-i18n="statusOngoing">En cours</span>
     <img src="/assets/projects/fst-mohammedia/1.jpg" alt="Siège de scolarité, FST Mohammedia — façade principale" loading="lazy" decoding="async" width="1170" height="693">
     <div class="staticProjectNumber">17</div>
   </div>
@@ -347,8 +348,8 @@
     <div class="staticProjectCategory">Équipement</div>
     <h3>SIÈGE DE SCOLARITÉ - FST MOHAMMEDIA</h3>
     <p class="staticProjectCity">FST de Mohammedia, Région Casablanca-Settat, Maroc</p>
-    <p class="staticProjectProgram" data-i18n="progFST">Construction d’un équipement universitaire : siège de scolarité, administration, buvette et open space</p>
-        <p class="pfDesc">Équipement universitaire contemporain, fonctionnel et lisible, offrant un cadre d’accueil de qualité aux étudiants et au personnel. L’organisation distingue clairement les fonctions — scolarité, administration, buvette et open space — et assure des circulations fluides et maîtrisées. Les façades intègrent des brise-soleil verticaux qui apportent une protection solaire efficace et une identité architecturale forte, tandis que le noyau de circulation vitré affirme la centralité et la transparence du projet. La palette bleu et blanc offre une expression institutionnelle sobre et contemporaine, en harmonie avec le contexte universitaire.</p>
+    <p class="staticProjectProgram" data-i18n="progFST">Construction d’un équipement universitaire : siège de scolarité, administration, buvette et open space — en cours de réalisation</p>
+        <p class="pfDesc">Équipement universitaire contemporain, fonctionnel et lisible, offrant un cadre d’accueil de qualité aux étudiants et au personnel. L’organisation distingue clairement les fonctions — scolarité, administration, buvette et open space — et assure des circulations fluides et maîtrisées. Les façades intègrent des brise-soleil verticaux qui apportent une protection solaire efficace et une identité architecturale forte, tandis que le noyau de circulation vitré affirme la centralité et la transparence du projet. La palette bleu et blanc offre une expression institutionnelle sobre et contemporaine, en harmonie avec le contexte universitaire. Le chantier est en cours : les dernières photos montrent le bâtiment en phase de second œuvre, avec ses façades enduites, ses menuiseries posées et ses espaces intérieurs en finition.</p>
     <span class="pfOpen" data-i18n="pfOpen">Voir le projet →</span>
   </div>
 </article>
@@ -587,7 +588,7 @@ const galleryMap = {
   'CHANTIER — STATION DE SERVICES, SIDI AYAD': ['/assets/projects/chantier-station-sidi-ayad/1.jpg','/assets/projects/chantier-station-sidi-ayad/2.jpg','/assets/projects/chantier-station-sidi-ayad/3.jpg'],
   'IMMEUBLE REDHA — HAMRYA': ['/assets/projects/immeuble-redha-hamria/1.jpg','/assets/projects/immeuble-redha-hamria/2.jpg','/assets/projects/immeuble-redha-hamria/3.jpg'],
   'AMÉNAGEMENT D’UN RESTAURANT': ['/assets/projects/amenagement-restaurant/1.jpg?v=2','/assets/projects/amenagement-restaurant/2.jpg?v=2','/assets/projects/amenagement-restaurant/3.jpg?v=2','/assets/projects/amenagement-restaurant/4.jpg?v=2'],
-  'SIÈGE DE SCOLARITÉ - FST MOHAMMEDIA': ['/assets/projects/fst-mohammedia/1.jpg','/assets/projects/fst-mohammedia/2.jpg','/assets/projects/fst-mohammedia/3.jpg'],
+  'SIÈGE DE SCOLARITÉ - FST MOHAMMEDIA': ['/assets/projects/fst-mohammedia/1.jpg','/assets/projects/fst-mohammedia/2.jpg','/assets/projects/fst-mohammedia/3.jpg','/assets/projects/fst-mohammedia/4.jpg','/assets/projects/fst-mohammedia/5.jpg','/assets/projects/fst-mohammedia/6.jpg'],
   'PLATEAUX BUREAUX KÉNITRA': ['/assets/projects/plateaux-bureaux-kenitra/1.jpg','/assets/projects/plateaux-bureaux-kenitra/2.jpg','/assets/projects/plateaux-bureaux-kenitra/3.jpg'],
   'CENTRE COMMERCIAL ATTAYSSIR': ['/assets/projects/centre-commercial-attayssir/1.jpg','/assets/projects/centre-commercial-attayssir/2.jpg','/assets/projects/centre-commercial-attayssir/3.jpg','/assets/projects/centre-commercial-attayssir/4.jpg','/assets/projects/centre-commercial-attayssir/5.jpg'],
   'POULAILLER DE POULES REPRODUCTRICES': ['/assets/projects/poulailler-poules-reproductrices/1.jpg','/assets/projects/poulailler-poules-reproductrices/2.jpg','/assets/projects/poulailler-poules-reproductrices/3.jpg'],
@@ -672,6 +673,6 @@ document.querySelectorAll('.staticProjectCard').forEach(card=>{
   document.addEventListener('keydown',e=>{ if(document.getElementById('projectModal').classList.contains('hidden'))return; if(e.key==='ArrowRight')go(1); else if(e.key==='ArrowLeft')go(-1); else if(e.key==='Escape')closeProject(); });
 })();
 </script>
-<script src="/site-i18n.js?v=20261023-status"></script>
+<script src="/site-i18n.js?v=20261023-fst2"></script>
 </body>
 </html>
